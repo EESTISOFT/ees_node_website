@@ -1,0 +1,381 @@
+.hay_scroll_load_all_link{text-decoration:underline}
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO BASIC ODOO FIXES */
+.website_blog .o_blog_cover_container > .blog_title {position:relative;margin-top:100px}
+.latest_posts .website_blog .o_blog_cover_container > .o_blog_cover_component {display:initial !important}
+.website_blog .latest_posts .o_blog_cover_container > .o_blog_cover_component {display:initial !important}
+.website_blog .latest_posts .o_blog_cover_container > .o_blog_cover_component {display:inline-block !important;}
+.website_blog .text-muted{display: inline-block;}
+.website_blog .o_blog_cover_container.o_list_cover.cover{display:inline-block;width:250px !important;}
+.website_blog div[name="blog_post"] {-webkit-box-shadow: 3px 3px 16px 0px rgba(140,138,140,1);-moz-box-shadow: 3px 3px 16px 0px rgba(140,138,140,1);box-shadow: 3px 3px 16px 0px rgba(140,138,140,1);}
+.website_blog div[name="blog_post"] > a {width:55%;margin-left:5%;display:inline-block;vertical-align:top;margin-top:16px;text-decoration:none}
+.website_blog div[name="blog_post"] > a> p	{color: black;}
+.website_blog div[name="blog_post"] .o_sharing_links{float: left;margin-right: 10px;margin-top: 0;}
+
+
+header{position:fixed;z-index:100;width:100%;}
+header .navbar-default{height:14vh;padding-top:5vh;border:none !important;
+ background: -moz-linear-gradient(top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 92%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+ background: -webkit-linear-gradient(top, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 92%, rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+ background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0) 92%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */;}
+.navbar-nav > li {margin: 0 15px;}
+.navbar-default .navbar-nav > li > a {color: #fafafa;}
+.navbar-default .navbar-nav > li > a:hover { border-bottom: 2px solid white; border-radius:1%; background-color:transparent; color:white;}
+.navbar-default .navbar-nav > .active > a {background-color:transparent;color: white;text-align:center;border-bottom: 2px solid white;}
+.navbar-default .navbar-nav > .active > a:hover { border-bottom: 2px solid white; border-radius: 1%; background-color:transparent; color:white;}
+.nav .navbar-nav .navbar-right{ width: 80%;}
+.nav > li > a {padding:0 !important}
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO SALOTTO MILANESE BEGIN */
+/* ------------------------------------------------------------------------------------ HOME */
+#veronica_logo , .navbar-brand.logo{	
+	filter: grayscale(100%) brightness(100%) contrast(200%) invert(100%);
+	-webkit-filter: grayscale(100%) brightness(100%) contrast(200%) invert(100%);
+}
+/* DIAGONAL CONTENT */
+#ribbon1 .container {height:205px;}
+#ribbon1 .container .row div {position:relative;z-index:10}
+#ribbon2 {overflow: hidden;display: inline-block;}
+#ribbon2 .container {position:absolute;}
+.mask0{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ba9733;border-width:200px 0 0 98.5vw;position:absolute;margin-top:-200px}
+.mask1{width:0;height:0;border-style:solid;border-color:transparent #ba9733 transparent transparent;border-width:0 98.5vw 200px 0;position:absolute}
+.mask2{width:0;height:0;border-style:solid;border-color:#ffffff transparent transparent transparent;border-width:200px 98.5vw 0 0}
+.mask3{width:0;height:0;border-style:solid;border-color:transparent transparent #ffffff transparent;border-width:0 0 200px 98.5vw}
+/* MINI SLIDES */
+.carousel-control.left{background:transparent}
+.carousel-control.right{background:transparent}
+/* PRODUCT SLIDER */
+ section#categories .row{display:flex;margin:0;overflow:hidden}
+ section#categories a {background-size:cover;background-position:center;display:inline-flex;width:16.4vw;height: 400px;transform: skewX(165deg);overflow: hidden;background-color:transparent;
+	border-left:2px solid white;border-right:2px solid white;flex-shrink:1; transition:300ms linear;transition:all 1s;}
+ section#categories a div {transform: skewX(14deg);width: 140%; margin-left: -20%;align-self: flex-end;height:400px;background-size:cover;background-position:center;position:absolute;}
+ section#categories a:hover{width:30%;margin-top:10px;}
+ section#categories a:hover div {width:140%;margin-left:-20%}
+/* ---------------------------------------------------------------------------------- FOOTER */
+section#contact {margin-bottom: 25px;}
+section#contact input[type=text], section#contact input[type=email]{float: right;clear: right;width: 40%;background-color: transparent;   border: none;color:white;}
+section#contact input::-webkit-input-placeholder{color:#eaeaea;font-style: italic;}
+section#contact label {float: left;clear: left;width: 40%;}
+section#contact .section-heading {color: #000;}
+section#contact input, section#contact .form-group textarea {padding: 20px;}
+section#contact .form-control{border-bottom: 1px solid #19b3f4 !important;border: 1px solid #fff;border-radius: 0rem;}
+section#contact .form-control:focus {border-color: #19B3F4;box-shadow: none;}
+section#contact input.form-control {height: auto;}
+section#contact textarea.form-control {	height: 150px;}
+section#contact input, section#contact textarea {padding: 15px;}
+section#contact ::-webkit-input-placeholder {font-weight: 700;color: #ced4da;font-family: 'Raleway', sans-serif;}
+section#contact :-moz-placeholder {font-weight: 700;color: #ced4da;/* Firefox 18- */font-family: 'Raleway', sans-serif;}
+section#contact ::-moz-placeholder {font-weight: 700;color: #ced4da;/* Firefox 19+ */font-family: 'Raleway', sans-serif;}
+section#contact :-ms-input-placeholder {font-weight: 700;color: #ced4da;font-family: 'Raleway', sans-serif;}
+section#socials {position:absolute;z-index: 10;width: 100%;}
+
+/* ---------------------------------------------------------------------------------- FOOTER */
+section#Mail_Chimp_Messages {margin-bottom: 25px;}
+section#Mail_Chimp_Messages input[type=text],section# input[type=email]{float: right;clear: right;width: 40%;background-color: transparent;   border: none;color:white;}
+section#Mail_Chimp_Messages input::-webkit-input-placeholder{color:#eaeaea;font-style: italic;}
+section#Mail_Chimp_Messages label {float: left;clear: left;width: 40%;}
+section#Mail_Chimp_Messages .section-heading {color: #000;}
+section#Mail_Chimp_Messages input, section#Mail_Chimp_Messages .form-group textarea {padding: 20px;}
+section#Mail_Chimp_Messages .form-control{border-bottom: 1px solid #19b3f4 !important;border: 1px solid #fff;border-radius: 0rem;}
+section#Mail_Chimp_Messages .form-control:focus {border-color: #19B3F4;box-shadow: none;}
+section#Mail_Chimp_Messages input.form-control {height: auto;}
+section#Mail_Chimp_Messages textarea.form-control {	height: 150px;}
+section#Mail_Chimp_Messages input, section#Mail_Chimp_Messages textarea {padding: 15px;}
+section#Mail_Chimp_Messages ::-webkit-input-placeholder {font-weight: 700;color: #ced4da;font-family: 'Raleway', sans-serif;}
+section#Mail_Chimp_Messages :-moz-placeholder {font-weight: 700;color: #ced4da;/* Firefox 18- */font-family: 'Raleway', sans-serif;}
+section#Mail_Chimp_Messages ::-moz-placeholder {font-weight: 700;color: #ced4da;/* Firefox 19+ */font-family: 'Raleway', sans-serif;}
+section#Mail_Chimp_Messages :-ms-input-placeholder {font-weight: 700;color: #ced4da;font-family: 'Raleway', sans-serif;}
+section#Mail_Chimp_Messages {position:absolute;z-index: 10;width: 100%;}
+.jssocials-shares {margin: .2em 0}.jssocials-shares * {box-sizing: border-box}.jssocials-share {display: inline-block;vertical-align: top;margin: .3em .6em .3em 0}.jssocials-share:last-child {margin-right: 0}.jssocials-share-logo {width: 1em;vertical-align: middle;font-size: 1.5em}img.jssocials-share-logo {width: auto;height: 1em}.jssocials-share-link {display: inline-block;text-align: center;text-decoration: none;line-height: 1}.jssocials-share-link.jssocials-share-link-count {padding-top: .2em}.jssocials-share-link.jssocials-share-link-count .jssocials-share-count {display: block;font-size: .6em;margin: 0 -.5em -.8em}.jssocials-share-link.jssocials-share-no-count {padding-top: .5em}.jssocials-share-link.jssocials-share-no-count .jssocials-share-count {height: 1em}.jssocials-share-label {padding-left: .3em;vertical-align: middle}.jssocials-share-count-box {display: inline-block;line-height: 1;vertical-align: middle;cursor: default}.jssocials-share-count-box.jssocials-share-no-count {display: none}.jssocials-share-count {line-height: 1.5em;vertical-align: middle}.jssocials-share-link {padding: .5em .6em;border-radius: .3em;border: 2px solid #212529;color: #212529;-webkit-transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out}.jssocials-share-link:active, .jssocials-share-link:focus, .jssocials-share-link:hover {border: 2px solid #19B3F4;color: #19B3F4}.jumbotron > .container > #share > .jssocials-shares > .jssocials-share > .jssocials-share-link {padding: .5em .6em;border-radius: .3em;border: 2px solid #fff;color: #fff;-webkit-transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;	transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out}.jumbotron > .container > #share > .jssocials-shares > .jssocials-share > .jssocials-share-link:active, .jumbotron > .container > #share > .jssocials-shares > .jssocials-share >  .jssocials-share-link:focus, .jumbotron > .container > #share > .jssocials-shares > .jssocials-share >  .jssocials-share-link:hover {border: 2px solid #000;color: #000}.jssocials-share-count-box {position: relative;height: 2.5em;padding: 0 .3em;margin-left: .4em;background: #f5f5f5;border-radius: .3em;-webkit-transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out}.jssocials-share-count-box:hover {background: #e8e8e8}.jssocials-share-count-box:hover:after {border-color: transparent #212529 transparent transparent}.jssocials-share-count-box:after {content: "";display: block;position:absolute;top:.75em;left: -.4em;width: 0;height: 0;border-width: .5em .5em .5em 0;border-style: solid;border-color: transparent #212529 transparent transparent;-webkit-transform: rotate(360deg);-ms-transform: rotate(360deg);transform: rotate(360deg);-webkit-transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out;transition: background .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out}.jssocials-share-count-box .jssocials-share-count {line-height: 2.5em;color: #212529}
+section#contact .jssocials-share {background-color:rgba(250,250,250,0.8)}
+
+
+
+
+/* --------------------------------------------------------------------------------- GALLERY */
+#swiper-gallery .swiper-container {width:100%;height:100vh;}
+
+
+
+
+/* OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+
+.vero_b.hb1 {background-color:black;color:white;padding:2vmin 1vmin; text-align:center; border:none; padding:1vmin 6vmin; font-weight:bold;letter-spacing:2px;float:right;transition:0.8s;}
+.hb1:hover {transform:scale(1.1);}
+.vero_b.hb2 {background-color:black;color:white;padding:2vmin 1vmin; text-align:center; border:none; padding:1vmin 5vmin;font-weight:bold;letter-spacing:2px;transition:0.8s;}
+.hb2:hover {transform:scale(1.1);}
+.vero_b.hb3 {background-color:black;color:white;padding:2vmin 1vmin; text-align:center; border:none; padding:1vmin 5vmin;font-weight:bold;letter-spacing:2px;transition:0.8s;}
+.hb3:hover {transform:scale(1.1);}
+.vero_b.hb4 {background-color:black;color:white;padding:2vmin 1vmin; text-align:center; border:none; padding:1vmin 5vmin;font-weight:bold;font-size: 150%; letter-spacing:2px;}
+.bg-gray-darker {background-color:black;}
+
+
+
+
+
+.vero_b.b1{background-color:black;border:none; padding:2vmin 1vmin;text-align:center;letter-spacing:2px;transition:all 0.3s ease-in-out;}
+.b1:hover {transform:scale(1.1);}
+.vero_b.btr{background:transparent;border:3px;border: 2px solid white;padding: 2vmin;text-align:center;transition: all 0.7s ease-in-out;}	
+.btr:hover{color: rgba(255, 255, 255, 1);box-shadow: 0 5px 15px rgba(145, 92, 182, .4);}
+.vero_b.b2{background:white;border:none;padding:2vmin;text-align:center;color:black;font-weight:bold !important;width: 32%;transition:all 0.3s ease-in-out;}
+.b2:hover {transform:scale(1.1);}
+
+
+.vero_b.b4{background:white;border:none;padding:2vmin;text-align:center;color:black;font-weight:bold !important;transition: 0.3s;}
+.b4:hover {background-color: black;color: white}
+.vero_b.b3{background-color:transparent;display: inline-block;border:4px;color:white;text-align:center;float:right;font-weight:bold;margin-right:0px;margin-right: -180px;position: absolute;right: 180px;bottom: -127px;}
+
+ 
+
+
+
+
+
+
+/*
+.navbar-right { }
+ciao 
+*/
+.vero_panel_1-2{background-image: url('http://217.163.30.43:8069/web/image/1089/03.jpgp');
+   color:white;
+   background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;     
+	width: 40%; 
+    display: inline-block;
+    
+   
+}
+	
+.horizontal .vero_panel_1-2{margin-right: 10%;}
+
+.vero_panel_2-2{ background-image:url('http://217.163.30.43:8069/web/image/1090/04.jpg'); 
+		color:white;
+   background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;     
+	width: 40%; 
+    display: inline-block;
+    
+   
+	}
+.vertical .vero_panel_2-2{min-width:90%;}                            
+.vertical .vero_panel_1-2{min-width:90%;margin-bottom:50px;}
+
+body { font-family:'Nanum Gothic', sans-serif;}
+		
+
+b {letter-spacing:3px;} 
+.vero_b.btr.met {background-color:transparent; color:black; border:none; width:50%;font-weight:bold; letter-spacing:3px;float:right;transition: all 1s;}
+.vero_b.btr.met:hover {margin-right:-16px;}
+.vero_b.mb1 {background-color:transparent; color:white; border:none; width:50%;font-weight:bold; letter-spacing:3px;float:right;transition: all 1s;} 
+.vero_b.mb1:hover {margin-right:-16px;}
+
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+
+
+.vero_b.mb3 {background-color:transparent; color:white; border:none; width:20%;font-weight:bold; display:inline-block;position:absolute;margin-left:-120px;margin-top:20px;}
+.vero_b.mb3:hover{
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+
+
+
+
+.fa.fa-angle-right {font-size:14px; font-weight:bold;}
+.fa.fa-angle-down {font-size:40px; font-weight:bold;}
+.row {text-align:center;}
+
+.carousel-inner.container {padding:15px;}
+.o_gallery.s_image_gallery.o_slideshow.o_spc_medium_mb48 {height:550px;}
+#slideshow 1535637527822 {background-position: center;}
+.o_gallery.o_slideshow.carousel.ul.carousel-indicators.li {border:3px;}
+
+.fa.fa-chevron-right.g {color:gray;}
+.fa.fa-chevron-left {color:gray;}
+
+form{font-family:'Nanum Gothic', sans-serif !important; font-style:normal !important;}
+
+.btn-primary:hover {background-color:lightgray; border-color:lightgrey;}
+.btn-primary {background-color:darkgray;border-color:darkgray;}
+   
+
+/* ---------------------------------------------------------------------------------- FOOTER */
+
+#mc_embed_signup_scroll {width:60%;margin-left:20%;margin-right:20%}
+section#Mail_Chimp_Messages .form-control{border:transparent; border-bottom:1.5px solid #cccccc}
+
+#mce-MMERGE6 {border:none;width:100%; height:100px;border:2px solid lightgray;}
+.form-group {margin-bottom:5px}
+#contactus_scroll {width:30%;margin-left:10%;}
+#contatti-intro {height:520px;background-color:white;margin-left:20%;margin-right:20%; margin-top:-180px;display:block; font-family:'Nanum Gothic', sans-serif;box-shadow: 3px 3px 16px 0px rgba(140,138,140,1);border:1px solid lightgrey}
+
+.vertical #contatti-intro {width:100%}
+
+
+
+.h2 {margin-left:50px; margin-top:40px;font-weight:bold;letter-spacing:2px;font-size:20px}
+.p1 {margin-left:50px;font-size:14px}
+
+#mergeRow-gdpr {display:none;}
+section#Mail_Chimp_Messages input.form-control {height:15px;}
+label {font-weight:lighter;}
+
+#mc-embedded-subscribe {border-radius:0;position:relative; margin-top:-59px;box-shadow:0 2px 3px rgba(0,0,0,0.3);background-color:black;color:white;padding:2vmin 1vmin; text-align:center; border:none; padding:1vmin 5vmin;font-weight:bold;letter-spacing:2px;transition: all 0.5s ease-in-out;}
+#mc-embedded-subscribe:hover {transform:scale(1.1)}
+#mc-embedded-subscribe:after {box-shadow: 0 5px 15px rgba(0,0,0,0.8);transition: opacity 0.3s ease-in-out;}
+
+.js_blog.website_blog {background-image:url('http://217.163.30.43/web/image/809/marble1.png');background-position:cover}
+
+.mb32.b1{background-color:white}
+
+
+h1 {font-family:'Nanum Gothic', sans-serif;letter-spacing:3px;font-weight:bold;text-align:left; font-size:40px;margin-top:40px; color:black}
+/* .container.latest_posts {margin-top:-25px} */
+
+/* .s_text_block_image_fw .container {margin-top:130px} */
+
+#contact-map {background-image:url('http://217.163.30.43/web/image/2393/Catturajbkjb.PNG');background-size:cover;background-position:center;background-repeat:no-repeat;width:480px; height:519px; border:transparent; position:absolute;text-align:right;margin-top:-491px;margin-left:390px}
+
+#vaso {width:425px;height:380px;position:absolute;border:none; margin-top:40px;
+margin-left:20%; background-image:url('http://217.163.30.43/web/image/2406/salotto_milanese_0210-HDR.png');
+background-position:center;background-size:cover;}
+
+#newsletter_form {;position:absolute;margin-left:50%;margin-top:110px;text-align:center;}
+
+
+#btn_iscriviti {margin-left:40px;border-radius:0;position:relative; margin-top:40px;box-shadow:0 2px 3px rgba(0,0,0,0.3);background-color:black;color:white;padding:2vmin 1vmin; text-align:center; border:none; padding:1vmin 5vmin;font-weight:bold;letter-spacing:2px;transition: all 0.5s ease-in-out;}
+#btn_iscriviti:hover {transform:scale(1.1)}
+#btn_iscriviti:after {box-shadow: 0 5px 15px rgba(0,0,0,0.8);transition: opacity 0.3s ease-in-out;}
+
+
+#Mail_Chimp_Messages {background-image:url('http://217.163.30.43/web/image/809/marble1.png');}
+
+.vero_cover {height:350px;}
+
+#vero_footer {width:100%;height:400px;background-position:center;background-size:cover;background-repeat:no-repeat;background-image:url('web/image/2462/Salotto%20Milanese-Contatti-cuts-08.jpg');}
+
+
+.mb4.o_blog_post_title {text-align:left;color:black;}
+
+
+#footer_vero {margin-bottom:0;height:80vh;width:100%;margin-top:55%;position:absolute; background-image:url('http://217.163.30.43/web/image/2462/Salotto%20Milanese-Contatti-cuts-08.jpg');background-size:cover;background-position:center;}
+
+
+
+#contact {background-image:url('http://217.163.30.43/web/image/2462/Salotto%20Milanese-Contatti-cuts-08.jpg');background-size:cover;background-position:center;} 
+
+#footer_symbols {text-align:center; display:inline-block;}
+/* #symbol1 {width:100px;height:100px;border:1px solid white;background-image:url('http://217.163.30.43/web/image/2546/Salotto%20Milanese-Contatti-cuts-01.png');margin-left:400px;} */
+
+#footer_vero_logo {
+	filter: grayscale(100%) brightness(100%) contrast(200%) invert(100%);margin-left:15%;width:100px; height:100px;margin-top:150px;background-repeat:no-repeat;background-position:center; background-image:url('http://217.163.30.43/web/image/2550/Salotto%20Milanese-Contatti-cuts-05.png');background-size:100px;}
+
+
+#footer_vero_info1 {width:20%;height:60%;margin-left:35%;color:white;margin-top:-100px;position:absolute;}
+#footer_verp_info2 {width:20%;height:60%;margin-left:65%;color:white;margin-top:-100px;position:absolute;}
+.p_light {opacity:.5;font-style:oblique;color:lightgrey;font-family:'Nanum Gothic', sans-serif;line-height:10px;}
+.p_bold {font-size:bold;color:white;font-family:'Nanum Gothic', sans-serif;line-height:10px;}
+
+
+
+#footer_info_telefono {filter:grayscale(100%) brightness(100%) contrast(200%) invert(100%);margin-left:-20%; 
+position:absolute; 
+background-image:url('http://217.163.30.43/web/image/2549/Salotto%20Milanese-Contatti-cuts-04.png');
+width:40px;height:40px;
+background-size:30px;
+background-position:center; background-repeat:no-repeat;
+}
+
+#footer_info_mail{filter:grayscale(100%) brightness(100%) contrast(200%) invert(100%);margin-left:-20%; 
+position:absolute; 
+background-image:url('http://217.163.30.43/web/image/2548/Salotto%20Milanese-Contatti-cuts-03.png');
+width:40px;height:40px;
+background-size:30px;
+background-position:center; background-repeat:no-repeat;
+}
+
+
+#footer_info_website{filter:grayscale(100%) brightness(100%) contrast(200%) invert(100%);margin-left:-20%; 
+position:absolute; 
+background-image:url('http://217.163.30.43/web/image/2547/Salotto%20Milanese-Contatti-cuts-02.png');
+width:40px;height:40px;
+background-size:30px;
+background-position:center; background-repeat:no-repeat;
+}
+
+#footer_info_position {filter:grayscale(100%) brightness(100%) contrast(200%) invert(100%);margin-left:-20%; 
+position:absolute; 
+background-image:url('http://217.163.30.43/web/image/2546/Salotto%20Milanese-Contatti-cuts-01.png');
+width:40px;height:40px;
+background-size:30px;
+background-position:center; background-repeat:no-repeat;
+}
+
+#socials-contactus {filter:grayscale(100%) brightness(100%) contrast(200%);}
+
+/* .col-md-12.mb16.mt32 {width:300%} */
+
+#newsletter_input {margin-left:35px;margin-top:30px}
+
+
+#logo_fondo {display:inline-block;margin-top:70px;width:140px;height:140px;background-image:url('http://217.163.30.43/web/image/2550/Salotto%20Milanese-Contatti-cuts-05.png');background-size:135px;background-position:center;background-repeat:no-repeat}
+.p_fondo {font-family:'Nanum Gothic',sans-serif;letter-spacing:2px;color:grey;margin-top:10px;text-align:center;font-size:11px;}
+.footer_fondo {text-align:center}
+
+
+.latest_posts {margin-top:32px}
+.b1:hover{transform:scale(1);}
+
+#blog_post_name {text-align:center; color:white;}

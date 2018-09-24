@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates t-name="hay_scroll_load_link"><t t-extend="Pager">
+	<t t-jquery="span.o_pager_limit" t-operation="replace">
+		<a href="#" onclick="HAY.scroll_load.loadall(this)" title="Load all records" class="hay_scroll_load_all_link"><span class="o_pager_limit"></span></a>
+	</t>z
+</t></templates>

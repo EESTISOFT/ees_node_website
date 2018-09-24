@@ -1,0 +1,1080 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo><!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+<!-- OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO Frontend essets -->
+<template id="ees_website.homepage" name="Home - website name here" website_id="website.default_website" active="1">
+    <t t-call="website.layout">
+    <t t-set="pageName" t-value="'homepage'"/>
+    <div id="wrap" class="oe_structure">
+<script>
+    window.onmainvideoended=function(elm){
+        elm.parentElement.style.backgroundImage="url('/web/image/840')";
+        elm.style.display='none';
+    };
+</script>
+      <section class="s_text_block_image_fw mt0 mb0" style="background-image:url('/web/image/840');position:relative;background-color:black;background-size:cover; background-position: 49.28% 48.12%;">
+<!--<video width="320" height="240" autoplay="autoplay" onended="onmainvideoended(this)" style="width:100%;height:100%;z-index:50;position:absolute;">
+  <source src="http://217.163.30.43/web/image/2143" type="video/mp4"/>
+Your browser does not support the video tag.
+</video>-->
+        <div class="container">
+          <div class="row">
+            <div class="o_animate o_anim_fade_in_left mt128 mb128 col-md-offset-4 col-md-3 o_animated" style="animation-name: o_anim_fade_in_left; visibility: visible; animation-play-state: running;">
+              <br/>
+              <p style="text-align: left;">
+                <img id="veronica_logo" src="/web/image/841" class="pull-left" style="width: 100%; transform: translateX(13.3%) translateY(18.4%);" data-original-title="" title=""/>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ribbon1" class="s_text_block" style="">
+        <div class="container">
+          <div class="row">
+            <div class="o_animate o_anim_fade_in_left mt64 col-md-4 o_animated" style="animation-name: o_anim_fade_in_left; visibility: visible; animation-play-state: running;">
+              <p>
+                <font class="text-black" style="">&amp;nbsp;</font>
+                <img src="/web/image/2128/design.png" class="pull-left o_anim_fade_in_right o_animate_preview o_animate" style="width: 100%;" data-original-title="" title=""/>
+              </p>
+            </div>
+            <div class="o_animate o_anim_fade_in_right mb32 col-md-7 col-md-offset-1 o_animated" style="animation-name: o_anim_fade_in_right; visibility: visible; animation-play-state: running;">
+              <h4 style="text-align: right; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);"><span style="letter-spacing: 3px;"><b><font style="font-size: 24px;">Un nuovo concetto di lusso</font></b></span>&amp;nbsp;
+              </h4>
+              <p style="text-align: right; ">
+                <font class="text-black" style="">Nasce a Milano la prima Shopping House del lusso, in via della Spiga&amp;nbsp; 2, al terzo piano di un bellissimo palazzo nel Quadrilatero della Moda milanese. Più di una showroom, più di un concept store, Il Salotto di Milano introduce un concetto innovativo ideato per valorizzare l'arte, la moda e il design.<br/>&amp;nbsp;</font>
+              </p>
+              <button class="vero_b hb1" onclick="document.location.href='/services'">I NOSTRI SERVIZI</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="ribbon2" class="s_text_block_image_fw mb0 oe_img_bg mt0 oe_custom_bg" style="max-height: 400px; background-position: 50.43% 33.81%; background-image: url(&quot;/web/image/963/salotto_milanese_0013-HDR.jpg&quot;);">
+        <div class="mask0"> </div>
+        <div class="mask1"> </div>
+        <div class="mask2"> </div>
+        <div class="container">
+          <div class="row">
+            <div class="o_animate bg-white-75 o_anim_fade_in_left col-md-4 col-md-offset-7 mb8 o_animated" style="animation-name: o_anim_fade_in_left; visibility: visible; animation-play-state: running;">
+              <h4 style="text-align: left; font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; color: rgb(51, 51, 51);">
+                <font class="text-black" style="font-size: 24px;">
+                  <b>Beauty is not enough</b>
+                </font>
+              </h4>
+              <p/>
+              <div style="text-align: left;">
+                <span style="color: rgb(0, 0, 0);">Il salotto di Milano introduce un concetto innovativo: sentirsi a casa per vivere una shopping experience "de luxe", tra momenti di arte, design, cultura, vernissage e degustazioni esclusive.<br/></span>
+              </div>
+              <p/>
+              <button class="vero_b hb2" onclick="document.location.href='/services'">MISSION</button>
+            </div>
+          </div>
+        </div>
+        <div class="mask3"> </div>
+      </section>
+      <div id="myCarousel1534974692725" class="carousel slide s_banner mb64 mt0" data-interval="10000" style="height: 400px;">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel1534974692725" data-slide-to="0"/>
+          <li data-target="#myCarousel1534974692725" data-slide-to="1" class="active"/>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item bg-white" style="">
+            <div class="container">
+              <div class="row content">
+                <div class="carousel-img hidden-sm hidden-xs mt64 col-md-4" style="">
+                  <img class="img-responsive" src="/web/image/2108/salotto_milanese_0079-HDR.jpg" alt="Slider Odoo Image" data-original-title="" title="" style="width: 100%;height:250px;"/>
+                </div>
+                <div class="carousel-content mb96 mt32 col-md-4" style="">
+                  <h2 style="text-align: center;">
+                    <b>
+                      <font style="font-size: 24px;">Una location prestigiosa, nel centro di Milano</font>
+                    </b>
+                  </h2>
+                  <h4 style="text-align: left; ">
+                    <div style="text-align: center;">
+                      <span style="font-family: inherit; font-size: 14px;">L'affascinante location vuole favorire l'esperienza multisensoriale grazie a una accurata ricerca di brand di alta gammache possono soddisfare le richieste dei clienti più esigenti.</span>
+                    </div>
+                    <div style="text-align: center;">
+                      <br/>
+                      <br/>
+                    </div>
+                  </h4>
+                  <p>
+                    <button class="vero_b hb3">LOCATION</button>
+                  </p>
+                </div>
+                <div class="carousel-content mt48 mb128 col-md-4" style="">
+                  <h4>
+                    <img src="/web/image/2001/salotto_milanese_0166-HDR.jpg" class="pull-left" style="width: 100%;" data-original-title="" title=""/>
+                    <br/>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item active">
+            <div class="container">
+              <div class="row content">
+                <div class="carousel-content col-md-4 col-md-offset-1 mb96 mt32">
+                  <h2 style="text-align: left; ">
+                    <font style="font-size: 24px;">
+                      <b>Il Salotto di Milano</b>
+                    </font>
+                  </h2>
+                  <h4 style="text-align: left; ">
+                    <font style="font-size: 14px;">Elegante e versatile, il Salotto di Milano si propone come vetrina delle eccellenze del Made in Italy e non solo.&amp;nbsp;</font>
+                  </h4>
+                  <h4 style="text-align: left; ">
+                    <font style="font-size: 14px;">Lo shopping sta evolvendo verso l'e-commerce, ma la nostra Shopping House ha un altro concetto di acquisto: far vivere al cliente sensazioni perdute e sempre più rare in quest'epoca 2.0.</font>
+                  </h4>
+                  <h4 style="text-align: left; ">
+                    <font style="font-size: 14px;">&amp;nbsp;<br/><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 83.0639px; bottom: 214.414px; transform: rotate(0rad) scale(1.07321, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">  Lo  shopping  si  sta  spostando  sempre  più  verso  l</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 297.642px; bottom: 213.52px; transform: rotate(0rad) scale(1, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">’</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 299.865px; bottom: 214.414px; transform: rotate(0rad) scale(1.09604, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">e-commerce.  Il  Salotto  di  Milano  vuole  per  contro  far  </span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 83.3011px; bottom: 203.374px; transform: rotate(0rad) scale(1.05285, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">vivere  </span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 113.167px; bottom: 202.48px; transform: rotate(0rad) scale(1, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">‘</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 115.475px; bottom: 203.374px; transform: rotate(0rad) scale(1.1035, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">one  to  one</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 164.632px; bottom: 202.48px; transform: rotate(0rad) scale(1, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">’</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 166.39px; bottom: 203.374px; transform: rotate(0rad) scale(1.07708, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">  al  cliente  sensazioni  rare  e  spesso  dimenticate  in  un</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 394.412px; bottom: 202.48px; transform: rotate(0rad) scale(1, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">’</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 396.635px; bottom: 203.374px; transform: rotate(0rad) scale(1.1273, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">epoca  2.0.  </span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 83.8573px; bottom: 181.294px; transform: rotate(0rad) scale(1, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">L</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 88.5293px; bottom: 180.4px; transform: rotate(0rad) scale(1, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">’</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 90.6889px; bottom: 181.294px; transform: rotate(0rad) scale(1.14874, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">idea  è  infatti  quella  di  creare  un  format  internazionale  da  sv</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 367.938px; bottom: 181.294px; transform: rotate(0rad) scale(1.1093, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">iluppare  nel  tempo  in  altri  luoghi  cult  </span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 83.5288px; bottom: 170.234px; transform: rotate(0rad) scale(1.10002, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">come  Miami,  Dubai  e  Tokyo,  per  tracciare  un  elegante  croc</span></p><p class="textbox" dir="ltr" style="margin-bottom: 0px; line-height: 1; position: absolute; color: transparent; opacity: 0.4; padding: 0px; transform-origin: left bottom 0px; white-space: pre; cursor: text; left: 346.392px; bottom: 170.234px; transform: rotate(0rad) scale(1.08672, 1); font-family: CenturyGothic, serif; font-size: 9.12px;"><span style="font-weight: inherit;">evia  del  lusso  di  nuova  generazione.</span><br/><br/></p></font>
+                  </h4>
+                  <p style="text-align: left;">
+                    <button class="vero_b hb3">LOCATION</button>
+                  </p>
+                </div>
+                <div class="carousel-img hidden-sm hidden-xs col-md-5 mt48">
+                  <img class="img-responsive" src="/web/image/2129/salotto_milanese_0134-HDR.jpg" alt="Slider Odoo Image" data-original-title="" title=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-control left" data-target="#myCarousel1534974692725" data-slide="prev" style="width: 10%" data-cke-saved-href="#myCarousel1534974692725">
+          <i class="fa fa-chevron-left" data-original-title="" title=""/>
+        </div>
+        <div class="carousel-control right" data-target="#myCarousel1534974692725" data-slide="next" style="width: 10%" data-cke-saved-href="#myCarousel1534974692725"> </div>
+      </div>
+      <section class="s_text_block" id="categories">
+        <div class="row">
+          <a>
+            <div href="#" style="background-image:url('http://217.163.30.43:8069/web/image/2123/prodotto1.jpg')">
+          </div>
+          </a>
+          <a>
+            <div href="#" style="background-image:url('http://217.163.30.43:8069/web/image/2124/prodotto2.jpg')">
+          </div>
+          </a>
+          <a>
+            <div href="#" style="background-image:url('http://217.163.30.43:8069/web/image/2125/prodotto3.jpg')">
+          </div>
+          </a>
+          <a>
+            <div href="#" style="background-image:url('http://217.163.30.43:8069/web/image/2126/prodotto4.jpg')">
+          </div>
+          </a>
+          <a>
+            <div href="#" style="background-image:url('http://217.163.30.43:8069/web/image/2127/prodotto5.jpg')">
+          </div>
+          </a>
+          <a>
+            <div href="#" style="background-image:url('http://217.163.30.43:8069/web/image/1042/prodotto1.jpg')">
+          </div>
+          </a>
+        </div>
+      </section>
+      <section class="jumbotron s_button bg-gray-darker">
+        <div class="container">
+          <div class="row text-center">
+            <button class="vero_b hb4">TUTTI I PRODOTTI</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </t>
+</template>
+
+<template id="ees_website.services" name="Our Services" website_id="website.default_website" active="1">
+    <t t-call="website.layout">
+    <t t-set="pageName" t-value="'services'"/>
+    <div id="wrap" class="oe_structure">
+      <section class="s_text_block_image_fw oe_img_bg mt0 oe_custom_bg mb0" style="background-image: url(&quot;/web/image/2108&quot;); background-position: 49.28% 48.12%;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mb128 mt48 o_visible" style="">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <div style="text-align: center;">
+                <br/>
+                <br/>
+                <br/>
+                <font color="#ffffff">
+                  <span style="font-size: 48px;">ESPOSIZIONE PRODOTTI</span>
+                </font>
+                <br/>
+                <font color="#ffffff">
+                  <br/>
+                </font>
+                <br/>
+              </div>
+              <button class="vero_b b2" onclick="document.location.href='/contactus'"> ESPONI IN SALOTTO MILANESE</button>
+              <button class="vero_b b3" onclick="document.location.href='/shop'">
+                <p class="ontop"> ESPLORA I <br/> NOSTRI PRODOTTI</p>
+                <p>
+                  <i class="fa fa-angle-right"/>
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_text_block_image_fw oe_img_bg oe_custom_bg mb0" style="background-image: url(&quot;/web/image/2139/02.jpg&quot;); background-position: 50.31% 47.37%;">
+        <div class="container">
+          <div class="row">
+            <div class="mt0 col-md-12 mb128">
+              <h2 style="text-align: center; font-size: 62px;">
+                <br/>
+                <font class="text-white" style="font-size: 48px;">VENDITA B2B</font>
+              </h2>
+              <h4>&amp;nbsp;</h4>
+              <p>
+                <br/>
+              </p>
+              <button class="vero_b btr" onclick="document.location.href='/contactus'">
+                <font style="font-size: 18px;" class="text-white">PARLACI DEL TUO PRODOTTO</font>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_three_columns mt64 mb64" style="">
+        <div class="container">
+          <div class="row" style="text-align:center;">
+            <div class="vero_panel_1-2"><p style="&#10;    background-image: url('/web/image/2140/03.jpg');&#10;    background-size: cover;&#10;"/><h4 class="mt16"><font style="font-size: 36px;"><br/></font></h4><h4 class="mt16"><font style="font-size: 36px;">PROGETTI DI MARKETING E COMUNICAZIONE</font></h4><h4 class="mt16">Ci prendiamo cura del tuo progetto e lo lanciamo nel circuito del lusso milanese e internazionale.</h4><h4 class="mt16">&amp;nbsp;</h4><br/><br/><br/><br/>&amp;nbsp;<br/><button class="b1 vero_b"><font style="" class="text-white">&amp;nbsp; LANCIA IL TUO PRODOTTO&amp;nbsp;</font></button></div>
+            <div class="vero_panel_2-2"><p class="o_default_snippet_text" style="&#10;    position: relative;&#10;    top: -200px;&#10;"/><h4 class="mt16"><font style="font-size: 36px;"><br/></font></h4><h4 class="mt16"><font style="font-size: 36px;">UFFICIO STAMPA</font>&amp;nbsp;</h4><h4 class="mt16"><br/></h4><h4 class="mt16">Ci prendiamo cura del tuo progetto e lo lanciamo nel circuito del lusso milanese e internazionale.<br/><br/><br/></h4><br/><br/>&amp;nbsp;&amp;nbsp;<br/><br/><br/><button class="b1 vero_b"><font style="" class="text-white">&amp;nbsp;CONTATTA LA NOSTRA REDAZIONE</font></button></div>
+          </div>
+        </div>
+      </section>
+      <section class="s_text_block_image_fw oe_img_bg oe_custom_bg mb0" style="background-image: url(&quot;/web/image/2142/05.jpg&quot;); background-size: cover; background-position: 49.56% 45.5%;">
+        <div class="container">
+          <div class="row">
+            <div class="mt64 col-md-12 mb16">
+              <h2 style="text-align: center;">
+                <font color="#ffffff" style="font-size: 18px;"><span style="font-size: 36px;">L'ECCELLENZA DEL MADE IN ITALY<br/></span>E NON SOLO.</font>
+                <font color="#ffffff">&amp;nbsp;</font>
+              </h2>
+              <h2 style="text-align: center;">
+                <font color="#ffffff">
+                  <br/>
+                </font>
+              </h2>
+             <a href="/shop">
+              <button class="vero_b b4" onclick="document.location.href='/shop'"> ESPLORA </button>
+              </a>
+              <h4/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </t>
+</template>
+
+<template id="ees_website.meetings" name="Our meetings" website_id="website.default_website" active="1">
+    <t t-call="website.layout">
+    <t t-set="pageName" t-value="'meetings'"/>
+    <div id="wrap" class="oe_structure">
+      <section class="s_text_block_image_fw oe_img_bg mb0 oe_custom_bg" style="background-position: 50% 100%; background-image: url(&quot;/web/image/2133&quot;);">
+        <div class="container">
+          <div class="row">
+            <div class="mt64 col-md-12 mb48">
+              <h2 style="text-align: center; font-size: 62px;">
+                <font class="text-white" style="font-size: 48px;"><br/>MEETING &amp;amp; EVENTI</font>
+              </h2>
+              <h4 style="text-align: center; "/>
+              <h4 style="text-align: center; ">
+                <font style="font-size: 24px;" class="text-white">
+                  <br/>
+                </font>
+              </h4>
+              <h4 style="text-align: center; ">
+                <font style="font-size: 24px;" class="text-white">IN SALOTTO MILANESE&amp;nbsp;</font>
+              </h4>
+              <p>
+                <font class="text-white" style="">&amp;nbsp;</font>
+              </p>
+              <p/>
+              <div style="text-align: center;">
+                <font class="text-white" style="">&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;</font>
+              </div>
+              <button class="vero_b mb3">
+                <font style="font-size: 12px;">
+                  <i class="fa fa-angle-down"/>
+                </font>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_image_text mb0 mt0" style="background-position: 77% 67.63%;">
+        <div class="container">
+          <div class="row">
+            <div class="mb0 col-md-offset-1 mt92 col-md-4">
+              <img class="img img-responsive center-block mb16" src="/web/image/2130" alt="Odoo image and text block" data-original-title="" title=""/>
+            </div>
+            <div class="col-md-6 mb92 mt92">
+              <h3 style="text-align: left; ">
+                <b>
+                  <font style="font-size: 36px;">TIMELESS BEAUTY</font>
+                </b>
+              </h3>
+              <p style="text-align: left; ">
+                <b>DI MARCO MAREZZA&amp;nbsp;</b>
+                <span style="" class="text-black-75">
+                  <br/>
+                </span>
+              </p>
+              <div style="text-align: left;">
+                <font color="#333333">
+                  <span class="text-black-75">
+                    <font color="#333333">Marco Marezza, con questo suo ennesimo lavoro, "disegna e racconta" una donna originale, in cui luoghi, persone e oggetti interagiscono e "parlano" con lei una lingua speciale che trasmette gioia e stupore, grazia e bellezza. Espressioni che, nell'intento del fotografo, devono coinvolgere il visitatore nella condivisione del momento della scoperta in quegli stati d'animo contaminati dal territorio che li circonda".</font>
+                  </span>
+                </font>
+              </div>
+              <p/>
+              <p style="text-align: left;">
+                <br/>
+              </p>
+              <p style="text-align: left;">
+                <b>
+                  <br/>
+                </b>
+              </p>
+              <p style="text-align: left;">
+                <b>11 Settembre 2018 - Dalle 19 alle 21</b>
+              </p>
+              <p/>
+              <div style="text-align: left;">Via della Spiga 2</div>
+              <div style="text-align: left;">20121 Milano</div>
+              <div style="text-align: left;">Italy</div>
+              <button class="btr met vero_b" onclick="document.location.href='/news/a_timeless_beauty-1'">
+                <font style="font-size: 12px;">SCOPRI DI PIÙ <i class="fa fa-angle-right"/></font>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_text_block_image_fw mb0 oe_img_bg oe_custom_bg mt0" style="background-image: url(&quot;/web/image/2131&quot;); background-position: 66.93% 41.99%;">
+        <div class="container">
+          <div class="row">
+            <div class="mt64 mb48 col-md-11">
+              <h2 style="font-size:62px">
+                <font style="font-size: 36px;" class="text-white">
+                  <b>LIVEIN ACCADEMY</b>
+                </font>
+              </h2>
+              <h4>
+                <font style="font-size: 14px;">
+                  <br/>
+                  <br/>
+                </font>
+              </h4>
+              <button class="vero_b mb1" onclick="document.location.href='/news/a_livein_academy-2'">
+                <font style="font-size: 12px;">SCOPRI DI PIÙ <i class="fa fa-angle-right"/></font>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="s_text_image mb0 mt0" style="">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-offset-1 mb128 col-md-5 mt64">
+              <h3 style="text-align: right;">
+                <font style="font-size: 36px;">D-TABLE</font>
+              </h3>
+              <p style="text-align: right;">D-Table, born from the idea of being the first interactive&amp;nbsp;<br/>multimedia table of luxury design, opens its new showroom <br/>in the heart of Milan, in collaboration with "Milan Lounge" at Via della Spiga 2.</p>
+              <p style="text-align: right;">
+                <br/>
+              </p>
+              <p style="text-align: left;">
+                <b>
+                  <br/>
+                </b>
+              </p>
+              <p style="text-align: left;">
+                <b>
+                  <br/>
+                </b>
+              </p>
+              <p style="text-align: left;">
+                <b>
+                  <br/>
+                </b>
+              </p>
+              <p style="text-align: left;">
+                <b>
+                  <br/>
+                </b>
+              </p>
+              <p style="text-align: left;">
+                <b><br/>September 2018</b>
+              </p>
+              <p style="text-align: right;"/>
+              <div style="text-align: left;">Via della Spiga 2</div>
+              <div style="text-align: left;">20121 Milano<br/>Italy</div>
+              <button class="vero_b btr met">
+                <font style="font-size: 12px;">SCOPRI DI PIÙ&amp;nbsp;<i class="fa fa-angle-right"/></font>
+              </button>
+            </div>
+            <div class="mb64 col-md-4 mt92">
+              <img class="img img-responsive pull-left mb16" src="/web/image/2132" alt="Odoo text and image block" data-original-title="" title=""/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </t>
+</template>
+
+<template id="ees_website.gallery" name="Our location" website_id="website.default_website" active="1">
+    <t t-call="website.layout">
+    <t t-set="pageName" t-value="'gallery'"/>
+    <div id="wrap" class="oe_structure">
+      <section class="s_text_block" id="swiper-gallery">
+        <!-- Slider main container -->
+<div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <style>
+        .swiper-slide{display: inline-block;width:auto !important;}
+        .swiper-slide img{height:100%;display:inline-block}
+        .swiper-button-next {margin-right: 50px;}
+        .swiper-pagination-bullet {width: 16px !important;height: 16px !important;background: #222266 !important;}
+    </style>
+<div class="swiper-container swiper-container-v">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+   <div class="swiper-container swiper-container-h1">
+   <div class="swiper-wrapper">
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2113/salotto_milanese_0216-HDR.jpg" data-index="0"/></div>
+   <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2114/salotto_milanese_0278-HDR.jpg" data-index="2"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2112/salotto_milanese_0189-HDR.jpg" data-index="1"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2001/salotto_milanese_0166-HDR.jpg" data-index="1"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2110/salotto_milanese_0142-HDR.jpg" data-index="1"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2103/salotto_milanese_0022-HDR.jpg" data-index="1"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/1916/salotto_milanese_0007-HDR.jpg" data-index="1"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2108/salotto_milanese_0079-HDR.jpg" data-index="1"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43:8069/web/image/2129/salotto_milanese_0134-HDR.jpg" data-index="1"/></div>
+   </div>
+   <div class="swiper-pagination swiper-pagination-h1"/>
+    <div class="swiper-button-prev swiper-button-prev-h1"/><div class="swiper-button-next swiper-button-next-h1"/>
+   </div>
+</div>
+<div class="swiper-slide">
+   <div class="swiper-container swiper-container-h2">
+   <div class="swiper-wrapper">
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43/web/image/2118/salotto_milanese_0303.jpg"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43/web/image/2117/salotto_milanese_0302.jpg" data-index="1"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43/web/image/2116/salotto_milanese_0288-HDR.jpg" data-index="2"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43/web/image/2115/salotto_milanese_0177-HDR.jpg" data-index="2"/></div>
+    <div class="swiper-slide"><img class="img img-responsive" src="http://217.163.30.43/web/image/2106/salotto_milanese_0071.jpg" data-index="1"/></div>
+  
+   </div>
+   <div class="swiper-pagination swiper-pagination-h2"/>
+    <div class="swiper-button-prev swiper-button-prev-h2"/><div class="swiper-button-next swiper-button-next-h2"/>
+   </div>
+</div>
+</div>
+<div class="swiper-pagination swiper-pagination-v"/>
+</div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"/>
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev-h"/>
+    <div class="swiper-button-next-h"/>
+    <!-- If we need scrollbar -->
+    <script>
+$(document).ready(function () {
+ //initialize swiper when document ready
+   var swiperV = new Swiper('.swiper-container-v', {
+      direction: 'vertical',
+      spaceBetween: 50,
+      pagination: {
+        el: '.swiper-pagination-v',
+        clickable: true,
+      },
+  });
+  var mySwiper1 = new Swiper ('.swiper-container-h1', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 30,
+    /*pagination:{el: '.swiper-pagination-h1'},*/
+    navigation:{nextEl: '.swiper-button-next-h1', prevEl: '.swiper-button-prev-h1'},
+    scrollbar:{el: '.swiper-scrollbar'}
+  });
+  var mySwiper2 = new Swiper ('.swiper-container-h2', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 30,
+    /*pagination:{el: '.swiper-pagination-h2'},*/
+    navigation:{nextEl: '.swiper-button-next-h2', prevEl: '.swiper-button-prev-h2'},
+    scrollbar:{el: '.swiper-scrollbar'}
+  });
+  
+
+});
+    </script>
+</div>
+      </section>
+    </div>
+  </t>
+</template>
+<!--
+
+
+
+
+
+lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+
+<t t-call="website_blog.index">
+    <t t-set="head">
+      <link t-att-href="'/blog/%s/feed' % (blog.id)" type="application/atom+xml" rel="alternate" title="Atom Feed"/>
+      <meta t-if="len(active_tag_ids) &gt; 0" name="robots" t-attf-content="#{len(active_tag_ids) &gt; 1 and 'noindex,'} nofollow"/>
+    </t>
+    <div class="oe_structure">
+      <section class="s_text_block_image_fw mt0 mb0 oe_img_bg oe_custom_bg">
+        <div class="container">
+          <div class="row">
+            <div class="bg-black-25 col-md-7 mb0 mt0">
+              <h4>
+                <br/>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container">
+      <t t-call="website.pager">
+        <t t-set="classname">pull-right</t>
+      </t>
+    </div>
+    <div class="oe_structure">
+      <section class="mb0">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 mb32 mt16 text-center">
+              <h1 t-field="blog.name"/>
+              <h3 class="text-muted" t-field="blog.subtitle"/>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="container latest_posts">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2" t-ignore="True" id="main_column">
+          <div t-if="not blog_posts" class="container mb64">
+            <p class="css_editable_hidden">
+              <h1>Nessun articolo presente.</h1>
+            </p>
+            <p groups="website.group_website_designer">
+                        Click on "New Page" in the top-right corner to write your first blog post.
+                    </p>
+          </div>
+          <div t-foreach="blog_posts" t-as="blog_post" class="mb32 b1" name="blog_post">
+            <a t-attf-href="/blog/#{ slug(blog_post.blog_id) }/post/#{ slug(blog_post) }">
+              <h2 t-field="blog_post.name" class="mb4 o_blog_post_title">Untitled Post</h2>
+              <p t-field="blog_post.teaser" class="mb12 mt12 o_blog_post_teaser"/>
+            </a>
+            <div class="text-muted">
+              <div name="blog_post_data" class="mb0"><span t-field="blog_post.author_id" style="display: inline-block;" t-options="{                                 &quot;widget&quot;: &quot;contact&quot;,                                 &quot;fields&quot;: [&quot;name&quot;]                             }"/>
+                            &amp;mdash; <span t-field="blog_post.post_date" t-options="{&quot;format&quot;: &quot;MMMM yyyy&quot;}"/>
+                            <span t-if="len(blog_post.message_ids) &gt; 0">
+                                &amp;mdash; <t t-esc="len(blog_post.message_ids)"/>
+                                <t t-if="len(blog_post.message_ids) &lt;= 1">commento</t>
+                                <t t-if="len(blog_post.message_ids) &gt; 1">commenti</t>
+                            </span>
+                            <span t-if="blog_post.visits &gt; 0">
+                                &amp;mdash; <t t-esc="blog_post.visits"/>
+                                <t t-if="blog_post.visits &lt;= 1">view</t>
+                                <t t-if="blog_post.visits &gt; 1">visualizzazioni</t>
+                            </span>
+                            <span t-if="not blog_post.website_published" class="label label-danger">non pubblicate</span>
+                            <span class="fa fa-tags"/>
+
+                            <t t-foreach="blog_post.tag_ids" t-as="one_tag"><a class="mr8" t-attf-href="#{blog_url(tag=one_tag.id, date_begin=False, date_end=False)}" t-esc="one_tag.name"/></t>
+                            <div class="o_sharing_links"><a class="fa fa-twitter-square o_twitter"/><a class="fa fa-facebook-square o_facebook"/><a class="fa fa-linkedin-square o_linkedin"/><a class="fa fa-google-plus-square o_google"/></div>
+                            <hr/>
+                        </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="oe_structure"/>
+  </t>
+
+lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+
+
+<t t-call="website.layout">
+    <div id="wrap">
+      <div class="oe_structure">
+        <section class="s_text_block_image_fw oe_img_bg oe_custom_bg vero_cover" style="background-image: url(&quot;/web/image/2446/Salotto%20Milanese-Contatti-cuts-06%20(1).jpg&quot;); background-position: 49.44% 46.54%;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mt64 mb0">
+                <p>
+                  <br/>
+                </p>
+                <p>&amp;nbsp;</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="s_text_block_image_fw oe_img_bg oe_custom_bg" style="background-image: url(&quot;/web/image/2119/1.jpg&quot;); background-position: 51.18% 58.69%;">
+          <style type="text/css">
+	/*#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	 Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */ </style>
+        </section>
+        <br/>
+        <section id="Mail_Chimp_Messages" class="s_text_block_image_fw oe_img_bg oe_custom_bg" style="/* background-image: url(&quot;/web/image/2119/1.jpg&quot;); */background-position: 51.18% 58.69%;">
+          <div id="mc_embed_signup">
+            <form action="https://salottomilanese.us19.list-manage.com/subscribe/post?u=c3b8910fa58b30705b9128e05&amp;id=a1d919ceca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+            <div id="contatti-intro">
+            <h2 class="h2">CONTATTACI</h2>
+             <p class="p1">Inserisci i tuoi dati e lasciaci un messaggio.<br/>Ti ricontattiamo noi!</p>
+             <br/>
+             
+             <div id="mc_embed_signup_scroll">
+                <div class="mc-field-group form-group">
+                  <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="La tua email" id="mce-EMAIL"/>
+                </div>
+                <div class="mc-field-group form-group">
+                  <input type="text" value="" name="FNAME" class="required form-control" placeholder="Il tuo nome" id="mce-FNAME"/>
+                </div>
+                <div class="mc-field-group form-group">
+                  <input type="text" value="" name="LNAME" class="required form-control" placeholder="Il tuo cognome" id="mce-LNAME"/>
+                </div>
+                <div class="mc-field-group form-group">
+                  <input type="text" value="" name="TELEFONO" class="required form-control" placeholder="Telefono" id="mce-TELEPHONE"/>
+                </div>
+                <br/>
+                <div class="mc-field-group">
+                  <label for="mce-MMERGE6">Il tuo messaggio:</label>
+                  <input type="text" value="" name="MMERGE6" id="mce-MMERGE6"/>
+               <br/><br/><br/><br/>
+               
+               <div id="contact-map"/>
+                  
+                </div>
+                <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                  <div class="content__gdpr">
+                    <label>Marketing Permissions</label>
+                    <p>Please select all the ways you would like to hear from Salotto Milanese:</p>
+                    <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+                      <label class="checkbox subfield" for="gdpr_5153">
+                        <input type="checkbox" id="gdpr_5153" name="gdpr[5153]" value="Y" class="av-checkbox "/>
+                        <span>Email</span>
+                      </label>
+                      <label class="checkbox subfield" for="gdpr_5157">
+                        <input type="checkbox" id="gdpr_5157" name="gdpr[5157]" value="Y" class="av-checkbox "/>
+                        <span>Direct Mail</span>
+                      </label>
+                      <label class="checkbox subfield" for="gdpr_5161">
+                        <input type="checkbox" id="gdpr_5161" name="gdpr[5161]" value="Y" class="av-checkbox"/>
+                        <span>Customized Online Advertising</span>
+                      </label>
+                    </fieldset>
+                    <p>You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.</p>
+                  </div>
+                  <div class="content__gdprLegal">
+                    <p>We use MailChimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to MailChimp for processing. Learn more about MailChimp's privacy practices <a href="https://mailchimp.com/legal/" target="_blank">here</a>.</p>
+                  </div>
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"/>
+                  <div class="response" id="mce-success-response" style="display:none"/>
+                </div>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_c3b8910fa58b30705b9128e05_38368d68b6" tabindex="-1" value=""/>
+                </div>
+                <div class="clearfix"/>
+                <div class="col-lg-12 text-center">
+                  <div id="success"/>
+                  <button id="mc-embedded-subscribe" class="btn btn-primary btn-xl text-uppercase send" type="submit" data-original-title="" title="">INVIA</button>
+                </div>
+              </div>
+              </div>
+            </form>
+          </div>
+          <div id="vaso">
+          </div>
+          <div id="newsletter_form">
+              <h2 class="h2">RESTA AGGIORNATO</h2>
+              <p class="p1">Ricevi la nostra newsletter</p>
+              <div id="newsletter_input">
+              <input type="email" value="" name="EMAIL" class="required email form-control 2" placeholder="La tua email" id="mce-EMAIL"/>
+                  <br/><input type="text" value="" name="FNAME" class="required form-control 2" placeholder="Il tuo nome" id="mce-FNAME"/>
+              </div>
+              <button id="btn_iscriviti" type="submit" data-original-title="" title="">ISCRIVITI</button>
+           </div>
+          
+        </section>
+        <section id="socials contactus" class="s_text_block mt0 mb0 o_animate o_anim_bounce_in o_visible o_animated" style="animation-name: o_anim_bounce_in; visibility: visible; animation-play-state: running;" data-oe-id="1427" data-oe-xpath="/data/xpath/section[2]" data-oe-model="ir.ui.view" data-oe-field="arch">
+      <div class="text-center">
+        <div id="share" class="jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-twitter"><a target="_blank" href="https://twitter.com/share?url=http%3A%2F%2F217.163.30.43%2Fshop&amp;text=Negozio%20%7C%20Salotto%20Milanese" class="jssocials-share-link"><i class="fa fa-twitter jssocials-share-logo"/><span class="jssocials-share-label">Tweet</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2F217.163.30.43%2Fshop" class="jssocials-share-link"><i class="fa fa-facebook jssocials-share-logo"/><span class="jssocials-share-label">Like</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-googleplus"><a target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2F217.163.30.43%2Fshop" class="jssocials-share-link"><i class="fa fa-google jssocials-share-logo"/><span class="jssocials-share-label">+1</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-linkedin"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2F217.163.30.43%2Fshop" class="jssocials-share-link"><i class="fa fa-linkedin jssocials-share-logo"/><span class="jssocials-share-label">Share</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-whatsapp"><a target="_self" href="whatsapp://send?text=http%3A%2F%2F217.163.30.43%2Fshop Negozio%20%7C%20Salotto%20Milanese" class="jssocials-share-link"><i class="fa fa-whatsapp jssocials-share-logo"/><span class="jssocials-share-label">WhatsApp</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div></div></div>
+      </div>
+    </section>
+        <section id="footer_vero">
+            <div id="socials-contactus" class="s_text_block mt0 mb0 o_animate o_anim_bounce_in o_visible o_animated" style="animation-name: o_anim_bounce_in; visibility: visible; animation-play-state: running;" data-oe-id="1427" data-oe-xpath="/data/xpath/section[2]" data-oe-model="ir.ui.view" data-oe-field="arch">
+      <div class="text-center">
+        <div id="share" class="jssocials"><div class="jssocials-shares"><div class="jssocials-share jssocials-share-twitter"><a target="_blank" href="https://twitter.com/share?url=http%3A%2F%2F217.163.30.43%2Fshop&amp;text=Negozio%20%7C%20Salotto%20Milanese" class="jssocials-share-link"><i class="fa fa-twitter jssocials-share-logo"/><span class="jssocials-share-label">Tweet</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-facebook"><a target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2F217.163.30.43%2Fshop" class="jssocials-share-link"><i class="fa fa-facebook jssocials-share-logo"/><span class="jssocials-share-label">Like</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-googleplus"><a target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2F217.163.30.43%2Fshop" class="jssocials-share-link"><i class="fa fa-google jssocials-share-logo"/><span class="jssocials-share-label">+1</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-linkedin"><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2F217.163.30.43%2Fshop" class="jssocials-share-link"><i class="fa fa-linkedin jssocials-share-logo"/><span class="jssocials-share-label">Share</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div><div class="jssocials-share jssocials-share-whatsapp"><a target="_self" href="whatsapp://send?text=http%3A%2F%2F217.163.30.43%2Fshop Negozio%20%7C%20Salotto%20Milanese" class="jssocials-share-link"><i class="fa fa-whatsapp jssocials-share-logo"/><span class="jssocials-share-label">WhatsApp</span></a><div class="jssocials-share-count-box jssocials-share-no-count"><span class="jssocials-share-count"/></div></div></div></div>
+      </div>
+    </div>
+            <div id="footer_symbols">
+                <div id="symbol1"/>
+                <div id="symbol2"/>
+                <div id="symbol3"/>
+                <div id="symbol4"/>
+            </div>
+            <div id="footer_vero_logo"/>
+            <div id="footer_vero_info1">
+            
+            <p class="p_light">Sede legale</p><p class="p_bold">Via dei Bossi 2/A 20121 Milano -IT</p><br/>
+            <div id="footer_info_position"/>
+            <p class="p_light">Sede operativa</p><p class="p_bold">Via della Spiga 2 20121 Milano -IT</p><br/>
+            <p class="p_light">P.Iva</p><p class="p_bold">09953860963</p>
+            </div>
+            <div id="footer_verp_info2">
+            <div id="footer_info_telefono"/>
+            <p class="p_light">Telefono</p><p class="p_bold">+39 0276317715</p><br/>
+            <div id="footer_info_mail"/>
+            <p class="p_light">E-Mail</p><p class="p_bold">info@salottomilanese.it</p><br/>
+            <div id="footer_info_website"/>
+            <p class="p_light">Website</p><p class="p_bold">www.salottomilanese.com</p>
+            </div>
+            
+        </section>
+      </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+        var f=document.getElementsByTagName("footer")[0];
+        f.style.display='none';
+});
+    </script>
+  </t>
+
+
+
+
+<section id="contact" class="s_text_block bg-gray oe_img_bg oe_custom_bg o_bg_img_opt_contain mb0" style="background-image: url(&quot;http://217.163.30.43/web/image/1092/foot.jpg&quot;);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb16 mt32">
+            <style type="text/css">
+	/*#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	 Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+            <div id="mc_embed_signup">
+              <form action="https://tech.us18.list-manage.com/subscribe/post?u=66b767e650821e5a42a68c417&amp;id=5558fd3ab6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                <div id="mc_embed_signup_scroll">
+                  <div class="checkbox form-group lettaprivacy">
+                    <label><input type="checkbox" name="pr" id="pr" required="" data-validation-required-message="Campo Obbligatorio" class="form-check-input"/><span class="cr"><i class="cr-icon fa fa-check"/></span> Letta l' informativa resa ai sensi dell'art.13 del D. lgs n. 196/03.<a href="#" id="privacy_rule" class="arancio">Leggi</a></label>
+                    <span class="help-block text-danger lettaprivacyerr"/>
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="La tua email" id="mce-EMAIL"/>
+                  </div>
+                  <div class="checkbox form-group">
+                    <label><input type="checkbox" name="pr1" id="pr1"/><span class="cr"><i class="cr-icon fa fa-check"/></span> Desidero rimanere aggiornato su prodotti e servizi di Salotto Milanese. </label>
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <input type="text" value="" name="FNAME" class="required form-control" placeholder="Il tuo nome" id="mce-FNAME"/>
+                  </div>
+                  <div class="checkbox form-group">
+                    <label><input type="checkbox" name="pr2" id="pr2"/><span class="cr"><i class="cr-icon fa fa-check"/></span> Acconsento all'utilizzo dei miei dati, anche di navigazione, e scelte di acquisto e professionali per propormi prodotti e servizi in linea con i miei interessi. </label>
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <input type="text" value="" name="LNAME" class="required form-control" placeholder="Il tuo cognome" id="mce-LNAME"/>
+                  </div>
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"/>
+                    <div class="response" id="mce-success-response" style="display:none"/>
+                  </div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_66b767e650821e5a42a68c417_5558fd3ab6" tabindex="-1" value=""/>
+                  </div>
+                  <div class="clearfix"/>
+                  <div class="col-lg-12 text-center">
+                    <div id="success"/>
+                    <button id="mc-embedded-subscribe" class="btn btn-primary btn-xl text-uppercase send" type="submit" data-original-title="" title="">Invia</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="socials" class="s_text_block mt0 mb0 o_animate o_anim_bounce_in" style="animation-name: o_anim_bounce_in; visibility: visible; animation-play-state: paused;">
+      <div class="text-center">
+        <div id="share" class="jssocials">
+          <div class="jssocials-shares">
+            <div class="jssocials-share jssocials-share-twitter">
+              <a target="_blank" href="https://twitter.com/share?url=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0&amp;text=Our%20meetings%20%7C%20Salotto%20Milanese" class="jssocials-share-link">
+                <i class="fa fa-twitter jssocials-share-logo"/>
+                <span class="jssocials-share-label">Tweet</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-facebook">
+              <a target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0" class="jssocials-share-link">
+                <i class="fa fa-facebook jssocials-share-logo"/>
+                <span class="jssocials-share-label">Like</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-googleplus">
+              <a target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0" class="jssocials-share-link">
+                <i class="fa fa-google jssocials-share-logo"/>
+                <span class="jssocials-share-label">+1</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-linkedin">
+              <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0" class="jssocials-share-link">
+                <i class="fa fa-linkedin jssocials-share-logo"/>
+                <span class="jssocials-share-label">Share</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-whatsapp">
+              <a target="_self" href="whatsapp://send?text=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0 Our%20meetings%20%7C%20Salotto%20Milanese" class="jssocials-share-link">
+                <i class="fa fa-whatsapp jssocials-share-logo"/>
+                <span class="jssocials-share-label">WhatsApp</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s_text_block">
+      <div id="map" style="width:100%;height:300px; position: relative; overflow: hidden;">
+      </div>
+    </section>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQIGlFa3Lb9Op-annHfdg0agKkMopkMgk&amp;callback=initMap"/>
+    
+	
+	
+	
+	
+		
+-->
+	
+<data inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
+  <xpath expr="//div[@id='footer']" position="replace">
+    <section id="contact" class="s_text_block bg-gray oe_img_bg oe_custom_bg o_bg_img_opt_contain mb0" style="background-image: url(&quot;http://217.163.30.43/web/image/1092/foot.jpg&quot;);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb16 mt32">
+            <style type="text/css">
+	/*#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	 Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+              <form action="https://salottomilanese.us19.list-manage.com/subscribe/post?u=c3b8910fa58b30705b9128e05&amp;id=a1d919ceca" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                <div id="mc_embed_signup_scroll">
+                  <div class="checkbox form-group lettaprivacy">
+                    <label><input type="checkbox" name="pr" id="pr" required="" data-validation-required-message="Campo Obbligatorio" class="form-check-input"/><span class="cr"><i class="cr-icon fa fa-check"/></span> Letta l' informativa resa ai sensi dell'art.13 del D. lgs n. 196/03.<a href="#" id="privacy_rule" class="arancio">Leggi</a></label>
+                    <span class="help-block text-danger lettaprivacyerr"/>
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <input type="email" value="" name="EMAIL" class="required email form-control" placeholder="La tua email" id="mce-EMAIL"/>
+                  </div>
+                  <div class="checkbox form-group">
+                    <label><input type="checkbox" name="pr1" id="pr1"/><span class="cr"><i class="cr-icon fa fa-check"/></span> Desidero rimanere aggiornato su prodotti e servizi di Salotto Milanese. </label>
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <input type="text" value="" name="FNAME" class="required form-control" placeholder="Il tuo nome" id="mce-FNAME"/>
+                  </div>
+                  <div class="checkbox form-group">
+                    <label><input type="checkbox" name="pr2" id="pr2"/><span class="cr"><i class="cr-icon fa fa-check"/></span> Acconsento all'utilizzo dei miei dati, anche di navigazione, e scelte di acquisto e professionali per propormi prodotti e servizi in linea con i miei interessi. </label>
+                  </div>
+                  <div class="mc-field-group form-group">
+                    <input type="text" value="" name="LNAME" class="required form-control" placeholder="Il tuo cognome" id="mce-LNAME"/>
+                  </div>
+<div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+    <div class="content__gdpr">
+        <label>Marketing Permissions</label>
+        <p>Please select all the ways you would like to hear from Salotto Milanese:</p>
+        <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+		<label class="checkbox subfield" for="gdpr_5141">
+		  <input type="checkbox" id="gdpr_5141" name="gdpr[5141]" value="Y" class="av-checkbox gdpr"/>
+		  <span>Email</span> </label>
+		<label class="checkbox subfield" for="gdpr_5145">
+		  <input type="checkbox" id="gdpr_5145" name="gdpr[5145]" value="Y" class="av-checkbox gdpr"/>
+		  <span>Direct Mail</span> </label>
+		<label class="checkbox subfield" for="gdpr_5149">
+		  <input type="checkbox" id="gdpr_5149" name="gdpr[5149]" value="Y" class="av-checkbox gdpr"/>
+		    <span>Customized Online Advertising</span>
+		</label>
+        </fieldset>
+        <p>You can unsubscribe at any time by clicking the link in the footer of our emails. For information about our privacy practices, please visit our website.</p>
+    </div>
+    <div class="content__gdprLegal">
+        <p>We use MailChimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to MailChimp for processing. Learn more about MailChimp's privacy practices <a href="https://mailchimp.com/legal/" target="_blank">here</a>.</p>
+    </div>
+</div>
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"/>
+                    <div class="response" id="mce-success-response" style="display:none"/>
+                  </div>
+                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_c3b8910fa58b30705b9128e05_38368d68b6" tabindex="-1" value=""/>
+                  </div>
+                  <div class="clearfix"/>
+                  <div class="col-lg-12 text-center">
+                    <div id="success"/>
+                    <button id="mc-embedded-subscribe" class="btn btn-primary btn-xl text-uppercase send" type="submit" data-original-title="" title="">Invia</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="socials" class="s_text_block mt0 mb0 o_animate o_anim_bounce_in" style="animation-name: o_anim_bounce_in; visibility: visible; animation-play-state: paused;">
+      <div class="text-center">
+        <div id="share" class="jssocials">
+          <div class="jssocials-shares">
+            <div class="jssocials-share jssocials-share-twitter">
+              <a target="_blank" href="https://twitter.com/share?url=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0&amp;text=Our%20meetings%20%7C%20Salotto%20Milanese" class="jssocials-share-link">
+                <i class="fa fa-twitter jssocials-share-logo"/>
+                <span class="jssocials-share-label">Tweet</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-facebook">
+              <a target="_blank" href="https://facebook.com/sharer/sharer.php?u=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0" class="jssocials-share-link">
+                <i class="fa fa-facebook jssocials-share-logo"/>
+                <span class="jssocials-share-label">Like</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-googleplus">
+              <a target="_blank" href="https://plus.google.com/share?url=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0" class="jssocials-share-link">
+                <i class="fa fa-google jssocials-share-logo"/>
+                <span class="jssocials-share-label">+1</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-linkedin">
+              <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0" class="jssocials-share-link">
+                <i class="fa fa-linkedin jssocials-share-logo"/>
+                <span class="jssocials-share-label">Share</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+            <div class="jssocials-share jssocials-share-whatsapp">
+              <a target="_self" href="whatsapp://send?text=http%3A%2F%2F217.163.30.43%3A8069%2Fevents%23scrollTop%3D0 Our%20meetings%20%7C%20Salotto%20Milanese" class="jssocials-share-link">
+                <i class="fa fa-whatsapp jssocials-share-logo"/>
+                <span class="jssocials-share-label">WhatsApp</span>
+              </a>
+              <div class="jssocials-share-count-box jssocials-share-no-count">
+                <span class="jssocials-share-count"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="s_text_block">
+      <div id="map" style="width:100%;height:300px; position: relative; overflow: hidden;">
+      </div>
+    </section>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQIGlFa3Lb9Op-annHfdg0agKkMopkMgk&amp;callback=initMap"/>
+      <div class="footer_fondo">
+        <div id="logo_fondo"> </div>
+        <div id="nome_fondo"><p class="p_fondo">Via della Spiga 2<br/>Milano</p>
+        </div>
+      </div>
+    <div id="footer" class="container hidden-print" t-if="not no_footer">
+      <div class="row" style="display:none">
+        <div class="col-md-4  col-lg-3" id="info">
+          <h4>Entra in contatto con noi</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="/contactus">Contattaci</a>
+            </li>
+          </ul>
+          <ul class="list-unstyled">
+            <li t-ignore="true">
+              <i class="fa fa-phone"/>
+              <span t-field="res_company.phone"/>
+            </li>
+            <li t-ignore="true">
+              <i class="fa fa-envelope"/>
+              <span t-field="res_company.email"/>
+            </li>
+          </ul>
+          <h2>
+            <a t-att-href="website.social_facebook" t-if="website.social_facebook">
+          <i class="fa fa-facebook-square"/>
+            </a>
+            <a t-att-href="website.social_twitter" t-if="website.social_twitter">
+              <i class="fa fa-twitter"/>
+            </a>
+            <a t-att-href="website.social_linkedin" t-if="website.social_linkedin">
+              <i class="fa fa-linkedin"/>
+            </a>
+            <a t-att-href="website.social_youtube" t-if="website.social_youtube">
+              <i class="fa fa-youtube-play"/>
+            </a>
+            <a t-att-href="website.social_googleplus" t-if="website.social_googleplus" rel="publisher">
+              <i class="fa fa-google-plus-square"/>
+            </a>
+            <a t-att-href="website.social_github" t-if="website.social_github">
+              <i class="fa fa-github"/>
+            </a>
+          </h2>
+        </div>
+        <div class="col-md-4 col-lg-5 col-lg-offset-1">
+          <!--<h4>
+            <span t-field="res_company.name"/>
+            <small> - <a href="/aboutus">Chi siamo</a></small>
+          </h4>-->
+          <div>
+          </div>
+          <t t-call="website.language_selector"/>
+        </div>
+      </div>
+    </div>
+  </xpath>
+</data>
+
+
+</odoo>
