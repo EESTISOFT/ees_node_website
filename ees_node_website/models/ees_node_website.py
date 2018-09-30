@@ -4,6 +4,7 @@
 
 	
 import subprocess
+import json
 from odoo import api, fields, models
 from datetime import datetime
 
@@ -27,6 +28,7 @@ class ees_node_website_page(models.Model):
 	use_header=fields.Boolean("Use Site Header", default=True)
 	use_footer=fields.Boolean("Use Site Footer", default=True)
 	content=fields.Text('html')
+	javascript=fields.Text('script')
 	
 class ees_node_website_site(models.Model):
 	_name='ees_node_website.site'
@@ -40,7 +42,112 @@ class ees_node_website_site(models.Model):
 	common_header=fields.Text('header html')
 	common_footer=fields.Text('footer html')
 	
+class ees_node_website_simplex(models.Model):
+	_name='ees_node_website.simplex'
+	name=fields.Char('Name')
+	substitution=fields.Char('Substitution')
+	value=fields.Char('Value')
+	page=fields.Many2one('ees_node_website.page',string="Page")	
+	@api.onchange('value','substitution')
+	def _replot_json(self):
+		for S in self:
+			if S.page:
+				R=S.page
+				jstring='{"items":['
+				if R.simplex:
+					for s in R.simplex:
+						if s.substitution:
+							if s.value:
+								jstring=jstring+'['+json.dumps(s.substitution)+','+json.dumps(s.value)+'],'
+				jstring=(jstring+']}')
+				R.simplexjson=jstring
+				
+	
+class ees_node_website_gallery_image(models.Model):
+	_name="ees_node_website.gallery_image"
+	image=fields.Binary('Image', attachment=True)
+	gallery=fields.Many2one('ees_node_website.gallery', 'Gallery', copy=True)
+
+class ees_node_website_gallery(models.Model):	
+	_name='ees_node_website.gallery'
+	name=fields.Char('Name')
+	active = fields.Boolean('Active', default=True)
+	site=fields.Many2one('ees_node_website.site',string="Website",default=1)
+	desc=fields.Text('Description')
+	images=fields.One2many('ees_node_website.gallery_image', 'gallery', string="Images")
+	#isg_site=fields.Many2one('isg.website_config',string="Website",default=1)
+
+class ees_node_website_slideshow(models.Model):
+	_name="ees_node_website.slideshow"
+	name=fields.Char('Name')
+	active = fields.Boolean('Active', default=True)
+	site=fields.Many2one('ees_node_website.site',string="Website",default=1)
+	desc=fields.Text('Description')
+
+class ees_node_website_template(models.Model):
+	_name="ees_node_website.template"
+	name=fields.Char('Name')
+	active = fields.Boolean('Active', default=True)
+	site=fields.Many2one('ees_node_website.site',string="Website",default=1)
+	slideshow=fields.Many2one('ees_node_website.slideshow',string="Slide Show")
+	desc=fields.Text('Description')
+	content=fields.Text('Content')
+
+class ees_node_website_slideshow_rels(models.Model):
+	_inherit=['ees_node_website.slideshow']
+	slides=fields.One2many('ees_node_website.template', 'slideshow', string="Slides")
+	
+	
+	
+class ees_node_website_blog_article(models.Model):
+	_inherit=['blog.post']
+	image=fields.Binary('Image', attachment=True)
+	summary=fields.Text('Summary')
+	is_event=fields.Boolean('Is Event')
+	date_string=fields.Char('Testo data')
+
+class ees_node_website_page_image(models.Model):
+	name='ees_node_website.page_image'
+	image=fields.Binary('Image', attachment=True)
+	selector=fields.Char('Selector')
+	
+	
 class ees_node_website_page_rels(models.Model):
 	_inherit=['ees_node_website.page']
 	site=fields.Many2one('ees_node_website.site',string="Website",default=1)
+	simplex=fields.One2many('ees_node_website.simplex', 'page', string="Substitutions")
+	simplexjson=fields.Text(compute='_get_simplexjson',store="true")
+	
+	
+	@api.depends('simplex')
+	@api.onchange('simplex')
+	def _get_simplexjson(self):
+		for R in self:
+			jstring='{"items":['
+			if R.simplex:
+				#simplexjson=json.dumps(R.simplex)
+				for s in R.simplex:
+					if s.substitution:
+						if s.value:
+							jstring=jstring+'['+json.dumps(s.substitution)+','+json.dumps(s.value)+'],'
+			jstring=(jstring+']}')
+			R.simplexjson=jstring
+	
+	
+#class isg_website_config(models.Model):
+##	_name='isg.website_config'
+#	text1=fields.Char("Testo UpLeft")
+#	text2=fields.Char("Testo UpRight")
+#	text3=fields.Char("Testo DownRight")
+#	text4=fields.Char("Testo DownLeft")
+#	text_aboutus=fields.Text("About us")
+#	cover_image=fields.Binary('Image', attachment=True)
+
+#class ees_node_website_gallery(models.Model):
+#	_inherit=['ees_node_website.gallery']
+
+#class ees_node_website_config_rels(models.Model):
+#	_inherit='isg.website_config'
+#	galleries=fields.One2many('ees_node_website.gallery', 'isg_site', string="Images")
+	
 	

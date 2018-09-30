@@ -3,6 +3,11 @@
 <record id="ees_node_website.engine" model="ees_odoo_node.script"><field name="name">EESTISOFT WEBSITE ENGINE</field>
 	<field name="desc">This script is the default node-js engine of the EESTISOFT WEBSITE module.</field>
 	<field name="jscontents">
+var express = require('express');var doDEBUG=true;
+var express=require('express');var serveStatic=require('serve-static')
+var app=express();var serve=serveStatic('C:\\Users\\Administrator\\Desktop\\PUBLIC');
+var app = express();
+
 const PORT=3000;
 var SITECACHE=[];var SITEHASH={};var updatecache=function(next){
 	ees.select('ees_node_website_SITE','true',function(err,data){
@@ -14,8 +19,13 @@ var SITECACHE=[];var SITEHASH={};var updatecache=function(next){
 });};
 
 
+<<<<<<< HEAD
+var mainengine=function(req, res){var S=SITECACHE[SITEHASH[req.hostname]];if(S){
+	var hh='&lt;?xml version="1.0"?&gt;';var PG_A='&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;'+S.common_head.replace(hh,'')+'&lt;/head&gt;&lt;body&gt;';var PG_B='&lt;/body&gt;&lt;/html&gt;';
+=======
 var mainengine=function(req, res){var S=SITECACHE[SITEHASH[req.hostname]];console.olog(req.hostname);console.olog(SITEHASH);
 	var hh='&lt;?xml version="1.0"?&gt;';var PG_A='&lt;html&gt;&lt;head&gt;'+S.common_head.replace(hh,'')+'&lt;/head&gt;&lt;body&gt;';var PG_B='&lt;/body&gt;&lt;/html&gt;';
+>>>>>>> 270e78455b55dba27e09417193f11619fd4b148c
 
 	var pt='url=\''+req.path+'\' AND site='+S.id;
 	if(req.path=='/'){if(S.defaultpage){pt='id='+S.defaultpage;}}
@@ -25,20 +35,32 @@ var mainengine=function(req, res){var S=SITECACHE[SITEHASH[req.hostname]];consol
 			if(P.use_header){bbb=bbb+S.common_header.replace(hh,'')}
 			bbb=bbb+P.content.replace(hh,'');
 			if(P.use_footer){bbb=bbb+S.common_footer.replace(hh,'')}
-			res.send(PG_A+bbb+PG_B);
+			var out=PG_A+bbb+PG_B;var simplex=P.simplexjson;
+			//console.log(simplex);
+			if(simplex){simplex=JSON.parse(simplex.replace(',]',']')).items;for(var s=0;s!=simplex.length;s++){
+				out=out.replace(simplex[s][0],simplex[s][1]);
+				out=out.replace(simplex[s][0],simplex[s][1]);
+			}}
+			res.send(out)			
 		}else{
-			res.send('NOT FOUND!!!');
-		}
-	}else{
-		console.log(pt);
-		res.send('NOT FOUND!!!');
+			//console.log('here1');
+			serve(req,res,function(){var fake=0;});
+	}}else{
+		//console.log(pt);
+		serve(req,res,function(){var fake=0;});
 	}}else{
 		console.log(err.message);
 		res.send('ERROR executing query:'+err.message);
 	}});
-};
+}else{res.write('forbidden')}};
 
-var express = require('express');var app = express();
+app.all('/query',function(req,res){
+	ees.select(req.query.t,req.query.w,function(err,data){if(err){console.log(err)}else{
+		var jstring=req.query.next+'('+JSON.stringify(data.rows)+');';
+		res.send(jstring);
+	}});
+});
+
 app.all('*',function(req,res){
 	var S=SITECACHE[SITEHASH[req.hostname]];
 	if(!S){updatecache(function(){mainengine(req,res)});}
@@ -74,7 +96,7 @@ app.listen(PORT,function(){
 <record id="ees_node_website.site_form" model="ir.ui.view">
 <field name="name">ees_node_website.site_form</field>
 <field name="model">ees_node_website.site</field><field eval="18" name="priority"/>
-<field name="arch" type="xml"><form><sheet><div class="oe_button_box" name="button_box">
+<field name="arch" type="xml"><form><div class="oe_button_box" name="button_box">
 	<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
 		<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/></button>
 	</div><div class="oe_title"><label class="oe_edit_only" for="name" string="Nome"/><h1><field name="name"/></h1></div>
@@ -92,7 +114,7 @@ app.listen(PORT,function(){
 			<field name="common_footer" widget="ace" ace-mode="html"/>
 		</page>
 	</notebook>
-</sheet></form></field></record>
+</form></field></record>
 <record id="ees_node_website.site_tree" model="ir.ui.view"><field name="name">ees_node_website.site_tree</field>
 <field name="model">ees_node_website.site</field><field eval="18" name="priority"/><field name="arch" type="xml"><tree>
 	<field name="name"/>
@@ -117,21 +139,23 @@ app.listen(PORT,function(){
 
 <record id="ees_node_website.page_form" model="ir.ui.view"><field name="name">ees_node_website.page_form</field>
 <field name="model">ees_node_website.page</field><field eval="18" name="priority"/><field name="arch" type="xml"><form>
-    <sheet><div class="oe_button_box" name="button_box">
+    <div class="oe_button_box" name="button_box">
 	<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
 		<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/></button>
 	</div><div class="oe_title"><label class="oe_edit_only" for="name" string="Nome"/><h1><field name="name"/></h1></div>
 	<hr/><group col="4"><field name="site"/><field name="url"/>
 	<field name="use_header"/>
 	<field name="use_footer"/>
-	</group>
-	<!--<notebook>
+	</group>	
+	<notebook>
+		<page string="substitutions">
+			<field name="simplex"><tree editable="bottom"><field name="name"/><field name="value"/><field name="substitution"/></tree></field>
+		</page>
 		<page string="content">
 			<field name="content" widget="ace" ace-mode="html"/>		
 		</page>
-	</notebook>-->
-	<label for="content" string="Content"/><field name="content" widget="ace" ace-mode="html"/>
-</sheet></form></field></record>
+	</notebook>
+</form></field></record>
 <record id="ees_node_website.page_tree" model="ir.ui.view"><field name="name">ees_node_website.page_tree</field>
 <field name="model">ees_node_website.page</field><field eval="18" name="priority"/><field name="arch" type="xml"><tree>
 	<field name="name"/>
@@ -153,9 +177,157 @@ app.listen(PORT,function(){
 
 
 
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<record id="ees_node_website.template_form" model="ir.ui.view"><field name="name">ees_node_website.template_form</field>
+<field name="model">ees_node_website.template</field><field eval="18" name="priority"/><field name="arch" type="xml"><form>
+    <div class="oe_button_box" name="button_box">
+	<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+		<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/></button>
+	</div><div class="oe_title"><label class="oe_edit_only" for="name" string="Nome"/><h1><field name="name"/></h1></div>
+	<hr/><group col="4"><field name="id"/><field name="site"/>
+	<field name="desc" cols="4"/></group>	
+	<notebook>
+		<page string="content"><field name="content" widget="ace" ace-mode="html"/></page>
+	</notebook>
+</form></field></record>
+<record id="ees_node_website.template_tree" model="ir.ui.view"><field name="name">ees_node_website.template_tree</field>
+<field name="model">ees_node_website.template</field><field eval="18" name="priority"/><field name="arch" type="xml"><tree>
+	<field name="name"/><field name="desc"/><field name="site"/><field name="active"/>
+</tree></field></record>
+<record id="ees_node_website.template_search" model="ir.ui.view"><field name="name">ees_node_website.template_search</field>
+<field name="model">ees_node_website.template</field><field eval="18" name="priority"/><field name="arch" type="xml"><search string="Views">
+    <field name="name" filter_domain="['|', '|', ('name','ilike',self), ('model','ilike',self), ('model_data_id','ilike',self)]" string="Script"/>
+    <filter string="Active" name="active" domain="[('active', '=',True)]"/>
+    <filter string="Inactive" name="inactive" domain="[('active', '=',False)]"/>
+</search></field></record>
+<record id="ees_node_website.template_action" model="ir.actions.act_window">
+	<field name="name">Find template</field>
+	<field name="res_model">ees_node_website.template</field>
+	<field name="view_mode">tree,form,pivot,graph</field>
+</record>
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<record id="ees_node_website.gallery_form" model="ir.ui.view"><field name="name">ees_node_website.gallery_form</field>
+<field name="model">ees_node_website.gallery</field><field eval="18" name="priority"/><field name="arch" type="xml"><form>
+    <div class="oe_button_box" name="button_box">
+	<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+		<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/></button>
+	</div><div class="oe_title"><label class="oe_edit_only" for="name" string="Nome"/><h1><field name="name"/></h1></div>
+	<hr/><group col="4"><field name="id"/><field name="site"/>
+	<field name="desc" cols="4"/></group>
+	<notebook><page string="images">
+			<field name="images" mode="kanban" context="{'default_name': name, 'arrangement': active_id}">
+				<kanban string="Arrangement Images"><field name="image" />
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<a t-if="!read_only_mode" type="delete" class="fa fa-times pull-right"/>
+								<div >
+									<img t-if="record.image.raw_value" style="width:200px" t-att-src="'data:image/png;base64,'+record.image.raw_value"/>
+								</div>
+								<div class="oe_kanban_details">
+								  <!--  <field name="name"/> -->
+								</div>
+							</div>
+						</t>
+					</templates>
+				</kanban>
+				<form>  <field name="image" /></form>
+			</field>
+	</page></notebook>
+</form></field></record>
+<record id="ees_node_website.gallery_tree" model="ir.ui.view"><field name="name">ees_node_website.gallery_tree</field>
+<field name="model">ees_node_website.gallery</field><field eval="18" name="priority"/><field name="arch" type="xml"><tree>
+	<field name="name"/><field name="desc"/><field name="site"/><field name="active"/>
+</tree></field></record>
+<record id="ees_node_website.gallery_search" model="ir.ui.view"><field name="name">ees_node_website.gallery_search</field>
+<field name="model">ees_node_website.gallery</field><field eval="18" name="priority"/><field name="arch" type="xml"><search string="Views">
+    <field name="name" filter_domain="['|', '|', ('name','ilike',self), ('model','ilike',self), ('model_data_id','ilike',self)]" string="Script"/>
+    <filter string="Active" name="active" domain="[('active', '=',True)]"/>
+    <filter string="Inactive" name="inactive" domain="[('active', '=',False)]"/>
+</search></field></record>
+<record id="ees_node_website.gallery_action" model="ir.actions.act_window">
+	<field name="name">Find gallery</field>
+	<field name="res_model">ees_node_website.gallery</field>
+	<field name="view_mode">tree,form,pivot,graph</field>
+</record>
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<record id="ees_node_website.slideshow_form" model="ir.ui.view"><field name="name">ees_node_website.slideshow_form</field>
+<field name="model">ees_node_website.slideshow</field><field eval="18" name="priority"/><field name="arch" type="xml"><form>
+    <div class="oe_button_box" name="button_box">
+	<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+		<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/></button>
+	</div><div class="oe_title"><label class="oe_edit_only" for="name" string="Nome"/><h1><field name="name"/></h1></div>
+	<hr/><group col="4"><field name="id"/><field name="site"/>
+	<field name="desc" cols="4"/></group>
+	<notebook>
+		<page string="slides"><field name="slides"><form>
+    <div class="oe_button_box" name="button_box">
+	<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+		<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/></button>
+	</div><div class="oe_title"><label class="oe_edit_only" for="name" string="Nome"/><h1><field name="name"/></h1></div>
+	<hr/><group col="4"><field name="id"/><field name="site"/>
+	<field name="desc" cols="4"/></group>	
+	<notebook>
+		<page string="content"><field name="content" widget="html"/></page>
+	</notebook>
+</form></field></page>
+	</notebook>
+</form></field></record>
+<record id="ees_node_website.slideshow_tree" model="ir.ui.view"><field name="name">ees_node_website.slideshow_tree</field>
+<field name="model">ees_node_website.slideshow</field><field eval="18" name="priority"/><field name="arch" type="xml"><tree>
+	<field name="name"/><field name="desc"/><field name="site"/><field name="active"/>
+</tree></field></record>
+<record id="ees_node_website.slideshow_search" model="ir.ui.view"><field name="name">ees_node_website.slideshow_search</field>
+<field name="model">ees_node_website.slideshow</field><field eval="18" name="priority"/><field name="arch" type="xml"><search string="Views">
+    <field name="name" filter_domain="['|', '|', ('name','ilike',self), ('model','ilike',self), ('model_data_id','ilike',self)]" string="Script"/>
+    <filter string="Active" name="active" domain="[('active', '=',True)]"/>
+    <filter string="Inactive" name="inactive" domain="[('active', '=',False)]"/>
+</search></field></record>
+<record id="ees_node_website.slideshow_action" model="ir.actions.act_window">
+	<field name="name">Find slideshow</field>
+	<field name="res_model">ees_node_website.slideshow</field>
+	<field name="view_mode">tree,form,pivot,graph</field>
+</record>
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<record id="ees_node_website.article_form" model="ir.ui.view"><field name="name">ees_node_website.article_form</field>
+<field name="model">blog.post</field><field name="inherit_id" ref="website_blog.view_blog_post_form" /><field eval="18" name="priority"/><field name="arch" type="xml">
+	<xpath expr="//group[2]" position="attributes">
+		<attribute name="invisible">1</attribute>
+	</xpath>
+	<xpath expr="//group[3]" position="attributes">
+		<attribute name="invisible">1</attribute>
+	</xpath>
+	<xpath expr="//group[1]" position="after">
+		<group string="Content">
+			<field name="post_date"/>
+			<field name="date_string"/>
+			<field name="image"/>
+			<field name="is_event"/>
+			<field name="summary" widget="html"/>
+			<field name="content"/>
+		</group>
+	</xpath>
+</field></record>
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<menuitem id="website.menu_website_configuration" parent="base_setup.menu_config" />
+<menuitem id="calendar.mail_menu_calendar" parent="base_setup.menu_config" />
+<menuitem id="mail.mail_channel_menu_root_chat" parent="base_setup.menu_config" />
+<menuitem id="utm.menu_link_tracker_root" parent="base_setup.menu_config" />
+	
 <menuitem id="ees_node_website.main_menu" name="WEBSITE" sequence="5" />
 	<menuitem id="ees_node_website.page_menu" parent="ees_node_website.main_menu" name="Pages" sequence="10" action="ees_node_website.page_action"/>
+	<menuitem id="ees_node_website.template_menu" parent="ees_node_website.main_menu" name="Templates" sequence="15" action="ees_node_website.template_action"/>
+	<menuitem id="ees_node_website.slideshow_menu" parent="ees_node_website.main_menu" name="Slideshows" sequence="20" action="ees_node_website.slideshow_action"/>
+	<menuitem id="ees_node_website.gallery_menu" parent="ees_node_website.main_menu" name="Galleries" sequence="25" action="ees_node_website.gallery_action"/>
+	<menuitem id="website_blog.menu_website_blog_root" parent="ees_node_website.main_menu" sequence="40"/>
 	<menuitem id="ees_node_website.site_menu" parent="ees_node_website.main_menu" name="Websites" sequence="100" action="ees_node_website.site_action" />
+	
 	<!--<menuitem id="ees_node_website.blog_main_menu" parent="ees_node_website.main_menu" name="Blog" sequence="15" />
 	<menuitem id="ees_node_website.blog_menu" parent="ees_node_website.blog_main_menu" name="Blog" sequence="20" />
 	<menuitem id="ees_node_website.article_menu" parent="ees_node_website.blog_main_menu" name="Articles" sequence="30" />
