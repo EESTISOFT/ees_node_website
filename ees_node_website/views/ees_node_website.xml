@@ -19,13 +19,8 @@ var SITECACHE=[];var SITEHASH={};var updatecache=function(next){
 });};
 
 
-<<<<<<< HEAD
 var mainengine=function(req, res){var S=SITECACHE[SITEHASH[req.hostname]];if(S){
 	var hh='&lt;?xml version="1.0"?&gt;';var PG_A='&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;'+S.common_head.replace(hh,'')+'&lt;/head&gt;&lt;body&gt;';var PG_B='&lt;/body&gt;&lt;/html&gt;';
-=======
-var mainengine=function(req, res){var S=SITECACHE[SITEHASH[req.hostname]];console.olog(req.hostname);console.olog(SITEHASH);
-	var hh='&lt;?xml version="1.0"?&gt;';var PG_A='&lt;html&gt;&lt;head&gt;'+S.common_head.replace(hh,'')+'&lt;/head&gt;&lt;body&gt;';var PG_B='&lt;/body&gt;&lt;/html&gt;';
->>>>>>> 270e78455b55dba27e09417193f11619fd4b148c
 
 	var pt='url=\''+req.path+'\' AND site='+S.id;
 	if(req.path=='/'){if(S.defaultpage){pt='id='+S.defaultpage;}}
