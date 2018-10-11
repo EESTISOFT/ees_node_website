@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ees_node_website_page,ees_node_website.page,model_ees_node_website_page,base.group_user,1,1,1,1
+ees_node_website_site,ees_node_website.site,model_ees_node_website_site,base.group_user,1,1,1,1
+ees_node_website_simplex,ees_node_website.simplex,model_ees_node_website_simplex,base.group_user,1,1,1,1
+ees_node_website_gallery,ees_node_website.gallery,model_ees_node_website_gallery,base.group_user,1,1,1,1
+ees_node_website_gallery_image,ees_node_website.gallery_image,model_ees_node_website_gallery_image,base.group_user,1,1,1,1
+ees_node_website_slideshow,ees_node_website.slideshow,model_ees_node_website_slideshow,base.group_user,1,1,1,1
+ees_node_website_fragment,ees_node_website.fragment,model_ees_node_website_fragment,base.group_user,1,1,1,1
+ees_node_website_page_image,ees_node_website.page_image,model_ees_node_website_page_image,base.group_user,1,1,1,1
