@@ -305,6 +305,7 @@ app.listen(PORT,function(){
 			<field name="post_date"/>
 			<field name="date_string"/>
 			<field name="image"/>
+			<field name="gallery"/>
 			<field name="is_event"/>
 			<field name="summary" widget="html"/>
 			<field name="content"/>
