@@ -10,6 +10,8 @@ var app = express();
 
 const PORT=3000;
 var SITECACHE=[];var SITEHASH={};var updatecache=function(next){
+	q="UPDATE public.ir_attachment SET public=true WHERE (res_model LIKE '%ees_node_website%')OR(res_model LIKE '%blog.post%');";
+	pgpool.query(q,function(d){var g=0;});	
 	ees.select('ees_node_website_SITE','true',function(err,data){
 		SITECACHE=data.rows;SITEHASH={};var aa=[];var a=0;
 		for(var d=0;d!=data.rows.length;d++){
@@ -17,7 +19,6 @@ var SITECACHE=[];var SITEHASH={};var updatecache=function(next){
 			for(a=0;a!=aa.length;a++){if(aa[a].trim()!=''){SITEHASH[aa[a]]=d;}}
 		}if(next){next();}
 });};
-
 
 var mainengine=function(req, res){var S=SITECACHE[SITEHASH[req.hostname]];if(S){
 	var hh='&lt;?xml version="1.0"?&gt;';var PG_A='&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;'+S.common_head.replace(hh,'')+'&lt;/head&gt;&lt;body&gt;';var PG_B='&lt;/body&gt;&lt;/html&gt;';
@@ -56,8 +57,10 @@ app.all('/query',function(req,res){
 	}});
 });
 
+var forceU=true;
 app.all('*',function(req,res){
 	var S=SITECACHE[SITEHASH[req.hostname]];
+	if(forceU){S=false;forceU=false;setTimeout(function(){forceU=true;},120000);}
 	if(!S){updatecache(function(){mainengine(req,res)});}
 	else{mainengine(req,res)}
 });
@@ -68,8 +71,8 @@ app.listen(PORT,function(){
 
 <record id="ees_node_website.default_site" model="ees_node_website.site"><field name="name">Default Website</field>
 	<field name="desc">This is the default website.</field><field name="binding">*,localhost</field>
-	<field name="common_header" type="xml"><header>This is the common header</header></field>
 	<field name="common_head" type="xml"><title>Default Website Title</title></field>
+	<field name="common_header" type="xml"><header>This is the common header</header></field>
 	<field name="common_footer" type="xml"><footer>This is the common footer</footer></field>	
 </record>
 <record id="ees_node_website.halloworld" model="ees_node_website.page"><field name="name">Hallo World</field><field name="site">1</field>
@@ -174,8 +177,8 @@ app.listen(PORT,function(){
 
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-<record id="ees_node_website.template_form" model="ir.ui.view"><field name="name">ees_node_website.template_form</field>
-<field name="model">ees_node_website.template</field><field eval="18" name="priority"/><field name="arch" type="xml"><form>
+<record id="ees_node_website.fragment_form" model="ir.ui.view"><field name="name">ees_node_website.fragment_form</field>
+<field name="model">ees_node_website.fragment</field><field eval="18" name="priority"/><field name="arch" type="xml"><form>
     <div class="oe_button_box" name="button_box">
 	<button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
 		<field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/></button>
@@ -186,19 +189,19 @@ app.listen(PORT,function(){
 		<page string="content"><field name="content" widget="ace" ace-mode="html"/></page>
 	</notebook>
 </form></field></record>
-<record id="ees_node_website.template_tree" model="ir.ui.view"><field name="name">ees_node_website.template_tree</field>
-<field name="model">ees_node_website.template</field><field eval="18" name="priority"/><field name="arch" type="xml"><tree>
+<record id="ees_node_website.fragment_tree" model="ir.ui.view"><field name="name">ees_node_website.fragment_tree</field>
+<field name="model">ees_node_website.fragment</field><field eval="18" name="priority"/><field name="arch" type="xml"><tree>
 	<field name="name"/><field name="desc"/><field name="site"/><field name="active"/>
 </tree></field></record>
-<record id="ees_node_website.template_search" model="ir.ui.view"><field name="name">ees_node_website.template_search</field>
-<field name="model">ees_node_website.template</field><field eval="18" name="priority"/><field name="arch" type="xml"><search string="Views">
+<record id="ees_node_website.fragment_search" model="ir.ui.view"><field name="name">ees_node_website.fragment_search</field>
+<field name="model">ees_node_website.fragment</field><field eval="18" name="priority"/><field name="arch" type="xml"><search string="Views">
     <field name="name" filter_domain="['|', '|', ('name','ilike',self), ('model','ilike',self), ('model_data_id','ilike',self)]" string="Script"/>
     <filter string="Active" name="active" domain="[('active', '=',True)]"/>
     <filter string="Inactive" name="inactive" domain="[('active', '=',False)]"/>
 </search></field></record>
-<record id="ees_node_website.template_action" model="ir.actions.act_window">
-	<field name="name">Find template</field>
-	<field name="res_model">ees_node_website.template</field>
+<record id="ees_node_website.fragment_action" model="ir.actions.act_window">
+	<field name="name">Find fragment</field>
+	<field name="res_model">ees_node_website.fragment</field>
 	<field name="view_mode">tree,form,pivot,graph</field>
 </record>
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
@@ -298,6 +301,7 @@ app.listen(PORT,function(){
 	</xpath>
 	<xpath expr="//group[1]" position="after">
 		<group string="Content">
+			<field name="seo_name"/>
 			<field name="post_date"/>
 			<field name="date_string"/>
 			<field name="image"/>
@@ -309,18 +313,22 @@ app.listen(PORT,function(){
 </field></record>
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
+<record id="ees_node_website.g_website" model="res.groups">
+	<field name="name">EES Website</field>
+</record>
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 <menuitem id="website.menu_website_configuration" parent="base_setup.menu_config" />
 <menuitem id="calendar.mail_menu_calendar" parent="base_setup.menu_config" />
 <menuitem id="mail.mail_channel_menu_root_chat" parent="base_setup.menu_config" />
 <menuitem id="utm.menu_link_tracker_root" parent="base_setup.menu_config" />
 	
-<menuitem id="ees_node_website.main_menu" name="WEBSITE" sequence="5" />
+<menuitem id="ees_node_website.main_menu" name="WEBSITE" sequence="5" groups="ees_node_website.g_website" />
 	<menuitem id="ees_node_website.page_menu" parent="ees_node_website.main_menu" name="Pages" sequence="10" action="ees_node_website.page_action"/>
-	<menuitem id="ees_node_website.template_menu" parent="ees_node_website.main_menu" name="Templates" sequence="15" action="ees_node_website.template_action"/>
+	<menuitem id="ees_node_website.gallery_menu" parent="ees_node_website.main_menu" name="Galleries" sequence="15" action="ees_node_website.gallery_action"/>
 	<menuitem id="ees_node_website.slideshow_menu" parent="ees_node_website.main_menu" name="Slideshows" sequence="20" action="ees_node_website.slideshow_action"/>
-	<menuitem id="ees_node_website.gallery_menu" parent="ees_node_website.main_menu" name="Galleries" sequence="25" action="ees_node_website.gallery_action"/>
-	<menuitem id="website_blog.menu_website_blog_root" parent="ees_node_website.main_menu" sequence="40"/>
+	<menuitem id="ees_node_website.fragment_menu" parent="ees_node_website.main_menu" name="Fragments" sequence="25" action="ees_node_website.fragment_action"/>
+	<menuitem id="website_blog.menu_website_blog_root" parent="ees_node_website.main_menu" name="Blog" sequence="40"/>
 	<menuitem id="ees_node_website.site_menu" parent="ees_node_website.main_menu" name="Websites" sequence="100" action="ees_node_website.site_action" />
 	
 	<!--<menuitem id="ees_node_website.blog_main_menu" parent="ees_node_website.main_menu" name="Blog" sequence="15" />
