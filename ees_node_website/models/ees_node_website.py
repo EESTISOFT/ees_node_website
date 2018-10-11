@@ -106,6 +106,7 @@ class ees_node_website_blog_article(models.Model):
 	summary=fields.Text('Summary')
 	is_event=fields.Boolean('Is Event')
 	date_string=fields.Char('Testo data')
+	gallery=fields.Many2one('ees_node_website.gallery',string="Gallery")
 	
 	@api.onchange('name')
 	def _auto_seo_name(self):
