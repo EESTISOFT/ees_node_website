@@ -84,8 +84,8 @@ class ees_node_website_slideshow(models.Model):
 	site=fields.Many2one('ees_node_website.site',string="Website",default=1)
 	desc=fields.Text('Description')
 
-class ees_node_website_template(models.Model):
-	_name="ees_node_website.template"
+class ees_node_website_fragment(models.Model):
+	_name="ees_node_website.fragment"
 	name=fields.Char('Name')
 	active = fields.Boolean('Active', default=True)
 	site=fields.Many2one('ees_node_website.site',string="Website",default=1)
@@ -95,16 +95,37 @@ class ees_node_website_template(models.Model):
 
 class ees_node_website_slideshow_rels(models.Model):
 	_inherit=['ees_node_website.slideshow']
-	slides=fields.One2many('ees_node_website.template', 'slideshow', string="Slides")
+	slides=fields.One2many('ees_node_website.fragment', 'slideshow', string="Slides")
 	
 	
 	
 class ees_node_website_blog_article(models.Model):
 	_inherit=['blog.post']
 	image=fields.Binary('Image', attachment=True)
+	seo_name=fields.Char('Seo name')
 	summary=fields.Text('Summary')
 	is_event=fields.Boolean('Is Event')
 	date_string=fields.Char('Testo data')
+	
+	@api.onchange('name')
+	def _auto_seo_name(self):
+		seoname=self.name
+		seoname=seoname.lower()
+		seoname=seoname.strip()
+		seoname=seoname.replace(' ','-')
+		seoname=seoname.replace('à','a')
+		seoname=seoname.replace('è','e')
+		seoname=seoname.replace('é','e')
+		seoname=seoname.replace('ì','i')
+		seoname=seoname.replace('ò','o')
+		seoname=seoname.replace('ù','u')
+		seoname=seoname.replace('\'','')
+		seoname=seoname.replace('/','-')
+		seoname=seoname.replace('+','-')
+		seoname=seoname.replace('°','')
+		seoname=seoname.replace('#','')
+		self.seo_name=seoname
+			
 
 class ees_node_website_page_image(models.Model):
 	name='ees_node_website.page_image'
