@@ -11,7 +11,7 @@ Adds backadmin views, and tweaks to native website module
 	
 Made with love.
     """,
-    'depends': ['calendar','website','website_blog','ees_odoo_node'],
+    'depends': ['calendar','utm','website','website_blog','ees_odoo_node'],
     'data': ['views/ees_node_website.xml'],
     'installable': True,
     'application': True,
