@@ -301,6 +301,7 @@ app.listen(PORT,function(){
 	</xpath>
 	<xpath expr="//group[1]" position="after">
 		<group string="Content">
+			<field name="is_published" />
 			<field name="seo_name"/>
 			<field name="post_date"/>
 			<field name="date_string"/>
