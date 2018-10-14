@@ -316,6 +316,16 @@ app.listen(PORT,function(){
 		</group>
 	</xpath>
 </field></record>
+	
+<record id="ees_node_website.job_form" model="ir.ui.view"><field name="name"ees_node_website.job_form/field>
+<field name="model">hr.job</field><field name="inherit_id" ref="hr.view_hr_job_form" /><field eval="18" name="priority"/><field name="arch" type="xml">
+	<xpath expr="//label[contains(@for,'description')]" position="before">
+	    <label for="website_published"/>
+	    <field name="website_published"/>
+	    <label for="website_description"/>
+	    <field name="website_description" widget="html"/>
+	</xpath>
+</field></record>
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
 <record id="ees_node_website.g_website" model="res.groups">
